@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="student_login">Student Login</string>
+    <string name="app_name">TnP</string>
+    <string name="swipe_left">Swipe Left for Admin Login</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="enter_details">Enter your details to view and manage your information</string>
+    <string name="swipe_right">Swipe Right for Student Login</string>
+    <string name="admin_login">Admin Login</string>
+</resources>
