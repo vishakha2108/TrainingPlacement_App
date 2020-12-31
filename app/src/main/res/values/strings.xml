@@ -10,4 +10,18 @@
     <string name="swipe_right">Swipe Right for Student Login</string>
     <string name="admin_login">Admin Login</string>
     <string name="edit_icon_text"><u>Edit</u></string>
+    <string name="partition_section">Partition section</string>
+    <string name="share_experience">SHARE EXPERIENCE</string>
+    <string name="company_name">COMPANY NAME:</string>
+    <string name="logo">Logo</string>
+    <string name="roll_no">ROLL NO:</string>
+    <string name="cgpa">CGPA:</string>
+    <string name="stream">STREAM:</string>
+    <string name="backlogs">BACKLOGS:</string>
+    <string name="institution">INSTITUTION:</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="name">Name</string>
+    <string name="write_your_experience_here">Write your experience here</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
 </resources>
