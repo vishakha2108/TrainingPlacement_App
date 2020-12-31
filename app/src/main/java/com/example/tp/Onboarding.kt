@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 
 class Onboarding : Fragment() {
@@ -12,6 +14,15 @@ class Onboarding : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_onboarding, container, false)
+        val view =  inflater.inflate(R.layout.fragment_onboarding, container, false)
+        val logAsStudent = view.findViewById<Button>(R.id.button_student_login)
+        logAsStudent.setOnClickListener {
+            //nav graph command
+        }
+        val logAsAdmin = view.findViewById<Button>(R.id.button_admin_login)
+        logAsAdmin.setOnClickListener {
+            //nav graph command
+        }
+        return view.rootView
     }
 }
