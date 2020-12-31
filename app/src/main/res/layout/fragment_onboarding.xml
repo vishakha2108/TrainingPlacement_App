@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    android:background="@drawable/gradient"
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:adjustViewBounds="false"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo_hero" />
+
+    <ImageView
+        android:id="@+id/section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="296dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_section" />
+
+    <ImageView
+        android:id="@+id/student_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="424dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_student_login" />
+
+    <ImageView
+        android:id="@+id/admin_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="560dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_admin_login" />
+
+    <Button
+        android:id="@+id/button_student_login"
+        android:layout_width="213dp"
+        android:layout_height="122dp"
+        android:alpha="0"
+        android:background="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/student_login"
+        app:layout_constraintTop_toTopOf="@+id/student_login" />
+
+    <Button
+        android:id="@+id/button_admin_login"
+        android:layout_width="209dp"
+        android:layout_height="121dp"
+        android:alpha="0"
+        app:layout_constraintStart_toStartOf="@id/admin_login"
+        app:layout_constraintTop_toTopOf="@id/admin_login" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

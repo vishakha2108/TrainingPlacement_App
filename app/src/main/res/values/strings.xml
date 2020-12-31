@@ -9,4 +9,5 @@
     <string name="enter_details">Enter your details to view and manage your information</string>
     <string name="swipe_right">Swipe Right for Student Login</string>
     <string name="admin_login">Admin Login</string>
+    <string name="edit_icon_text"><u>Edit</u></string>
 </resources>
