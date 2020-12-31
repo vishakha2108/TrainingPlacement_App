@@ -4,8 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 
 // TODO: Rename parameter arguments, choose names that match
@@ -36,18 +34,7 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view  =  inflater.inflate(R.layout.fragment_student, container, false)
-        val logbutton: Button = view.findViewById(R.id.button_login_student)
-        logbutton.setOnClickListener {
-            val username: TextView = view.findViewById(R.id.email_placeholder_student)
-            val password: TextView = view.findViewById(R.id.password_placeholder_student)
-            if(username.text.toString().equals("abc")) {
-                if(password.text.toString().equals("student")) {
-                    println("BYE")
-                }
-            }
-        }
-        return view
+        return inflater.inflate(R.layout.fragment_onboarding, container, false)
     }
 
     companion object {
