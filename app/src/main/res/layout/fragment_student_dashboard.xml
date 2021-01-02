@@ -67,13 +67,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="115dp"
-        android:layout_marginTop="102dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/roboto"
         android:text="@string/roll_no"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/student_icon_header" />
 
     <TextView
         android:id="@+id/display_rollno"
@@ -164,31 +164,6 @@
         app:layout_constraintStart_toEndOf="@id/display_backlogs_label"
         app:layout_constraintTop_toTopOf="@id/display_backlogs_label" />
 
-    <TextView
-        android:id="@+id/display_institution_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto"
-        android:text="@string/institution"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@id/display_backlogs_label"
-        app:layout_constraintTop_toBottomOf="@id/display_backlogs_label" />
-
-    <TextView
-        android:id="@+id/display_institution"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        android:fontFamily="@font/roboto"
-        android:text=""
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@id/display_institution_label"
-        app:layout_constraintTop_toTopOf="@id/display_institution_label" />
-
     <ImageView
         android:id="@+id/section"
         android:layout_width="wrap_content"
@@ -196,14 +171,14 @@
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/display_institution_label"
+        app:layout_constraintTop_toBottomOf="@id/display_backlogs_label"
         app:srcCompat="@drawable/ic_section" />
 
     <ImageView
         android:id="@+id/share_experience"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="55dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/section"
