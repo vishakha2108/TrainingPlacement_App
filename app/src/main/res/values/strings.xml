@@ -39,4 +39,5 @@
     <string name="delete">DELETE</string>
     <string name="enter_company_name">ENTER COMPANY NAME:</string>
     <string name="delete_company_from_database">DELETE COMPANY FROM DATABASE</string>
+    <string name="view_student_experiences">VIEW STUDENT EXPERIENCES</string>
 </resources>
