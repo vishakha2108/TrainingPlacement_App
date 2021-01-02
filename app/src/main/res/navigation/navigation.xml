@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     app:startDestination="@id/onboarding">
     <fragment
         android:id="@+id/onboarding"
         android:name="com.example.tp.Onboarding"
         android:label="Onboarding">
-        <action>
-
-        </action>
-        </fragment>
+        <action
+            android:id="@+id/action_onboarding_to_studentLogin"
+            app:destination="@id/studentLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentLogin"
+        android:name="com.example.tp.StudentLogin"
+        android:label="StudentLogin">
+        <action
+            android:id="@+id/action_studentLogin_to_studentRegistration"
+            app:destination="@id/studentRegistration" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminLogin"
+        android:name="com.example.tp.AdminLogin"
+        android:label="AdminLogin" />
+    <fragment
+        android:id="@+id/studentRegistration"
+        android:name="com.example.tp.StudentRegistration"
+        android:label="StudentRegistration" />
 </navigation>
