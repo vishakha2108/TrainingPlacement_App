@@ -38,66 +38,76 @@
         app:layout_constraintTop_toTopOf="@id/header_base" />
 
     <ImageView
-        android:id="@+id/list_icon_header"
+        android:id="@+id/delete_icon_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header_base"
-        app:srcCompat="@drawable/ic_details_icon_header" />
+        app:srcCompat="@drawable/ic_delete_icon" />
 
     <TextView
-        android:id="@+id/view_students_list"
+        android:id="@+id/delete_company_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/roboto"
-        android:text="@string/view_students_list"
+        android:text="@string/delete_company_from_database"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/list_icon_header"
-        app:layout_constraintStart_toEndOf="@id/list_icon_header"
-        app:layout_constraintTop_toTopOf="@id/list_icon_header" />
+        app:layout_constraintBottom_toBottomOf="@id/delete_icon_header"
+        app:layout_constraintStart_toEndOf="@id/delete_icon_header"
+        app:layout_constraintTop_toTopOf="@id/delete_icon_header" />
 
-    <ImageView
-        android:id="@+id/section_elongated"
+    <TextView
+        android:id="@+id/company_name_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header_base"
-        app:srcCompat="@drawable/ic_section_elongated" />
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp"
-        android:showDividers="middle|beginning|end"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/roboto"
+        android:text="@string/enter_company_name"
+        android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/section_elongated">
+        app:layout_constraintTop_toBottomOf="@id/delete_icon_header" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+    <EditText
+        android:id="@+id/company_name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/roboto"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/company_name_label" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+    <Button
+        android:id="@+id/button_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="275dp"
+        android:background="@color/red"
+        android:text="@string/delete"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/company_name" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/grey"
+        android:text="@string/cancel"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_delete" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,4 +25,18 @@
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
     <string name="view_students_list">LIST OF STUDENTS PLACED</string>
+    <string name="company_details">COMPANY DETAILS</string>
+    <string name="job_details">JOB DETAILS</string>
+    <string name="eligibility_criteria">ELIGIBILITY CRITERIA</string>
+    <string name="min_cgpa">MINIMUM CGPA:</string>
+    <string name="max_backlogs">MAXIMUM BACKLOGS:</string>
+    <string name="streams">STREAMS:</string>
+    <string name="location">LOCATION:</string>
+    <string name="job_description">JOB DESCRIPTION:</string>
+    <string name="stipend">STIPEND:</string>
+    <string name="additional_details">ADDITIONAL DETAILS</string>
+    <string name="write_additional_details_here">Write additional details here</string>
+    <string name="delete">DELETE</string>
+    <string name="enter_company_name">ENTER COMPANY NAME:</string>
+    <string name="delete_company_from_database">DELETE COMPANY FROM DATABASE</string>
 </resources>
