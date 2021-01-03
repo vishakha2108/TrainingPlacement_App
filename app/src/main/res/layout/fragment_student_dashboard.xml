@@ -174,65 +174,35 @@
         app:layout_constraintTop_toBottomOf="@id/display_backlogs_label"
         app:srcCompat="@drawable/ic_section" />
 
-    <ImageView
-        android:id="@+id/share_experience"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/section"
-        app:srcCompat="@drawable/ic_share_experience" />
-
     <Button
         android:id="@+id/button_share_experience"
+        android:layout_marginTop="55dp"
         android:layout_width="265dp"
         android:layout_height="145dp"
-        android:alpha="0"
-        app:layout_constraintBottom_toBottomOf="@id/share_experience"
-        app:layout_constraintEnd_toEndOf="@id/share_experience"
-        app:layout_constraintStart_toStartOf="@id/share_experience"
-        app:layout_constraintTop_toTopOf="@id/share_experience" />
-
-    <ImageView
-        android:id="@+id/view_experience"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:background="@drawable/ic_share_experience"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/share_experience"
-        app:srcCompat="@drawable/ic_view_experiences" />
+        app:layout_constraintTop_toTopOf="@id/section" />
 
     <Button
         android:id="@+id/button_view_experience"
         android:layout_width="265dp"
         android:layout_height="145dp"
-        android:alpha="0"
-        app:layout_constraintBottom_toBottomOf="@id/view_experience"
-        app:layout_constraintEnd_toEndOf="@id/view_experience"
-        app:layout_constraintStart_toStartOf="@id/view_experience"
-        app:layout_constraintTop_toTopOf="@id/view_experience" />
-
-    <ImageView
-        android:id="@+id/view_companies"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:background="@drawable/ic_view_experiences"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_experience"
-        app:srcCompat="@drawable/ic_company_details" />
+        app:layout_constraintTop_toBottomOf="@id/button_share_experience" />
 
     <Button
         android:id="@+id/button_view_companies"
         android:layout_width="265dp"
         android:layout_height="145dp"
-        android:alpha="0"
-        app:layout_constraintBottom_toBottomOf="@id/view_companies"
-        app:layout_constraintEnd_toEndOf="@id/view_companies"
-        app:layout_constraintStart_toStartOf="@id/view_companies"
-        app:layout_constraintTop_toTopOf="@id/view_companies" />
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ic_company_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_view_experience" />
 
     <ImageView
         android:id="@+id/edit_icon"
