@@ -191,4 +191,33 @@
         app:layout_constraintStart_toStartOf="@id/edit_icon"
         app:layout_constraintTop_toTopOf="@id/edit_icon" />
 
+    <Button
+        android:id="@+id/button_view_student_list"
+        android:layout_width="256dp"
+        android:layout_height="145dp"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="@id/view_student_list"
+        app:layout_constraintEnd_toEndOf="@id/view_student_list"
+        app:layout_constraintStart_toStartOf="@id/view_student_list"
+        app:layout_constraintTop_toTopOf="@id/view_student_list" />
+
+    <Button
+        android:id="@+id/button_add_company"
+        android:layout_width="256dp"
+        android:layout_height="145dp"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="@id/add_company"
+        app:layout_constraintEnd_toEndOf="@id/add_company"
+        app:layout_constraintStart_toStartOf="@id/add_company"
+        app:layout_constraintTop_toTopOf="@id/add_company" />
+
+    <Button
+        android:id="@+id/button_delete_company"
+        android:layout_width="256dp"
+        android:layout_height="145dp"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="@id/delete_company"
+        app:layout_constraintEnd_toEndOf="@id/delete_company"
+        app:layout_constraintStart_toStartOf="@id/delete_company"
+        app:layout_constraintTop_toTopOf="@id/delete_company" />
 </androidx.constraintlayout.widget.ConstraintLayout>

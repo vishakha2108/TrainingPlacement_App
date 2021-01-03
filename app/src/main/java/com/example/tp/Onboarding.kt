@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 
 class Onboarding : Fragment() {
     override fun onCreateView(
@@ -17,10 +18,12 @@ class Onboarding : Fragment() {
         val logAsStudent = view.findViewById<Button>(R.id.button_student_login)
         logAsStudent.setOnClickListener {
             //nav graph command
+            view.findNavController().navigate(R.id.action_onboarding_to_studentLogin)
         }
         val logAsAdmin = view.findViewById<Button>(R.id.button_admin_login)
         logAsAdmin.setOnClickListener {
             //nav graph command
+            view.findNavController().navigate(R.id.action_onboarding_to_adminLogin)
         }
         return view.rootView
     }
