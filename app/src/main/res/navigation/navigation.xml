@@ -20,7 +20,8 @@
         android:label="StudentLogin">
         <action
             android:id="@+id/action_studentLogin_to_studentDashboard"
-            app:destination="@id/studentDashboard" />
+            app:destination="@id/studentDashboard"
+            app:popUpTo="@id/onboarding" />
     </fragment>
     <fragment
         android:id="@+id/adminLogin"
@@ -28,7 +29,8 @@
         android:label="AdminLogin">
         <action
             android:id="@+id/action_adminLogin_to_adminDashboard"
-            app:destination="@id/adminDashboard" />
+            app:destination="@id/adminDashboard"
+            app:popUpTo="@id/onboarding" />
     </fragment>
     <fragment
         android:id="@+id/studentRegistration"
@@ -57,15 +59,26 @@
             app:destination="@id/studentExperience" />
         <action
             android:id="@+id/action_studentDashboard_to_studentViewExperiences"
-            app:destination="@id/studentViewExperiences" />
+            app:destination="@id/studentViewExperiences"
+            app:popUpTo="@id/studentDashboard" />
         <action
             android:id="@+id/action_studentDashboard_to_studentViewCompany"
-            app:destination="@id/studentViewCompany" />
+            app:destination="@id/studentViewCompany"
+            app:popUpTo="@id/studentDashboard" />
+        <action
+            android:id="@+id/action_studentDashboard_to_studentEdit"
+            app:destination="@id/studentEdit"
+            app:popUpTo="@id/studentDashboard" />
     </fragment>
     <fragment
         android:id="@+id/studentExperience"
         android:name="com.example.tp.StudentExperience"
-        android:label="StudentExperience" />
+        android:label="StudentExperience">
+        <action
+            android:id="@+id/action_studentExperience_to_studentDashboard"
+            app:destination="@id/studentDashboard"
+            app:popUpTo="@id/studentDashboard" />
+    </fragment>
     <fragment
         android:id="@+id/studentViewExperiences"
         android:name="com.example.tp.StudentViewExperiences"
@@ -77,13 +90,30 @@
     <fragment
         android:id="@+id/adminAddCompany"
         android:name="com.example.tp.AdminAddCompany"
-        android:label="AdminAddCompany" />
+        android:label="AdminAddCompany">
+        <action
+            android:id="@+id/action_adminAddCompany_to_adminDashboard"
+            app:destination="@id/adminDashboard" />
+    </fragment>
     <fragment
         android:id="@+id/adminDeleteCompany"
         android:name="com.example.tp.AdminDeleteCompany"
-        android:label="AdminDeleteCompany" />
+        android:label="AdminDeleteCompany">
+        <action
+            android:id="@+id/action_adminDeleteCompany_to_adminDashboard"
+            app:destination="@id/adminDashboard" />
+    </fragment>
     <fragment
         android:id="@+id/adminViewStudentList"
         android:name="com.example.tp.AdminViewStudentList"
         android:label="AdminViewStudentList" />
+    <fragment
+        android:id="@+id/studentEdit"
+        android:name="com.example.tp.StudentEdit"
+        android:label="StudentEdit">
+        <action
+            android:id="@+id/action_studentEdit_to_studentDashboard"
+            app:destination="@id/studentDashboard"
+            app:popUpTo="@id/studentDashboard" />
+    </fragment>
 </navigation>

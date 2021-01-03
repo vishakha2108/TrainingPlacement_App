@@ -49,4 +49,6 @@
     <string name="write_address_here">Write your address here</string>
     <string name="enter_password">ENTER PASSWORD:</string>
     <string name="reenter_password">RE-ENTER PASSWORD:</string>
+    <string name="edit_details">EDIT DETAILS</string>
+    <string name="welcome">Welcome</string>
 </resources>

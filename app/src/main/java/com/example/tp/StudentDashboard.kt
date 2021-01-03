@@ -15,21 +15,34 @@ class StudentDashboard : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_student_dashboard, container, false)
+
+        //share experience
         val shareExperience = view.findViewById<Button>(R.id.button_share_experience)
         shareExperience.setOnClickListener {
             //nav graph command
             view.findNavController().navigate(R.id.action_studentDashboard_to_studentExperience)
         }
+
+        //view experience
         val viewExperience = view.findViewById<Button>(R.id.button_view_experience)
         viewExperience.setOnClickListener {
             //nav graph command
             view.findNavController()
                 .navigate(R.id.action_studentDashboard_to_studentViewExperiences)
         }
+
+        //view company
         val viewCompany = view.findViewById<Button>(R.id.button_view_companies)
         viewCompany.setOnClickListener {
             //nav graph command
             view.findNavController().navigate(R.id.action_studentDashboard_to_studentViewCompany)
+        }
+
+        //edit details
+        val edit = view.findViewById<Button>(R.id.button_edit_details)
+        edit.setOnClickListener {
+            //nav graph command
+            view.findNavController().navigate(R.id.action_studentDashboard_to_studentEdit)
         }
         return view.rootView
     }
