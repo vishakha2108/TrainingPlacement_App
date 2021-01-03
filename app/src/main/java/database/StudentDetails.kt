@@ -15,7 +15,9 @@ data class StudentDetails(
      @ColumnInfo(name = "backlogs")
      val Backlogs:Int,
      @ColumnInfo(name = "stream")
-     val Stream:String
+     val Stream:String,
+     @ColumnInfo(name = "phone_no")
+     val PhoneNo:Int
 
 )
 

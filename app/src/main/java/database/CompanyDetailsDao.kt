@@ -3,6 +3,7 @@ package database
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
+import androidx.room.Query
 
 @Dao
 interface CompanyDetailsDao
@@ -10,7 +11,8 @@ interface CompanyDetailsDao
     @Insert
     suspend fun addCompanyDetails(company : CompanyDetails)
 
-    //@Delete
+    @Query("delete from company_details where CompanyName = :cname")
+    suspend fun delete(cname : String)
 
 }
 
