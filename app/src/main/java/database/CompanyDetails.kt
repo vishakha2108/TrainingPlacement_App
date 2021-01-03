@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "company_details")
 data class CompanyDetails(
-    @ColumnInfo(name = "name")
+    @PrimaryKey
     val CompanyName:String,
     @ColumnInfo(name = "min_cgpa")
     val MinCgpa:Float,

@@ -16,14 +16,15 @@ class StudentLogin : Fragment() {
     ): View? {
 
 
-        val view = inflater.inflate(R.layout.fragment_student_login, container, false)
-        val logbutton: Button = view.findViewById(R.id.button_enter)
+        val view = inflater.inflate(R.layout.fragment_student, container, false)
+        val logbutton: Button = view.findViewById(R.id.button_login_student)
         logbutton.setOnClickListener {
-            val username: EditText = view.findViewById(R.id.input_name)
-            val password: EditText = view.findViewById(R.id.input_password)
+            val username: EditText = view.findViewById(R.id.email_placeholder_student)
+            val password: EditText = view.findViewById(R.id.password_placeholder_student)
             if (username.text.toString().equals("abc")) {
                 if (password.text.toString().equals("student")) {
                     Toast.makeText(context, "Login Successful", Toast.LENGTH_LONG).show()
+                    println("hi")
                 } else {
                     Toast.makeText(context, "Invalid Password ", Toast.LENGTH_LONG).show()
                 }

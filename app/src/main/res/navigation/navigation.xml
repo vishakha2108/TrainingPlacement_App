@@ -3,13 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/onboarding">
+    app:startDestination="@id/adminAddCompany">
     <fragment
-        android:id="@+id/onboarding"
-        android:name="com.example.tp.Onboarding"
-        android:label="Onboarding">
-        <action>
-
-        </action>
-        </fragment>
+        android:id="@+id/adminAddCompany"
+        android:name="com.example.tp.AdminAddCompany"
+        android:label="AdminAddCompany" />
 </navigation>

@@ -21,7 +21,8 @@ class Onboarding : Fragment() {
         val logAsAdmin = view.findViewById<Button>(R.id.button_admin_login)
         logAsAdmin.setOnClickListener {
             //nav graph command
+
         }
-        return view.rootView
+        return view
     }
 }

@@ -10,7 +10,7 @@ interface ExperienceDao
     @Insert
     suspend fun addExperience(company : CompanyDetails)
 
-    @Query("Select * from experience")
-    suspend fun getExperience():List<Experience>
+    //@Query("Select * from experience")
+    //suspend fun getExperience():List<Experience>
 
 }

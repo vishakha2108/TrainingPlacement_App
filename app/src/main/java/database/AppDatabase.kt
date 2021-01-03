@@ -6,35 +6,34 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 
-@Database(entities = [ StudentDetails::class, CompanyDetails::class,PlacedStudents::class , Login::class], version = 1)
+@Database(entities = [ StudentDetails::class, CompanyDetails::class,PlacedStudents::class , Experience::class], version = 1)
 
 abstract class AppDatabase : RoomDatabase()
 {
-    abstract val StudentDetailsDao: StudentDetailsDao
-    abstract val CompanyDetailsDao: CompanyDetailsDao
-    abstract val PlacedStudentDao: PlacedStudentsDao
-    abstract val LoginDao: LoginDao
+    abstract fun getStudentDetailsDao() : StudentDetailsDao
+    abstract fun getCompanyDetailsDao(): CompanyDetailsDao
+    abstract fun getPlacedStudentsDao(): PlacedStudentsDao
+    abstract fun getExperienceDao(): ExperienceDao
     companion object {
         @Volatile
-        private var INSTANCE: AppDatabase? = null
-        fun getInstance(context: Context): AppDatabase {
+        private var instance: AppDatabase? = null
+        operator fun invoke(context: Context) = instance?:
+
             synchronized(this) {
-                var instance = INSTANCE
-                if(instance==null)
+                instance?: buildDatabase(context).also ()
                 {
-                    instance = Room.databaseBuilder(
-                        context.applicationContext,
-                        AppDatabase::class.java,
-                        "training_placement_ database").fallbackToDestructiveMigration()
-                        .build()
-                    INSTANCE = instance
+                    instance = it
                 }
-                return instance
             }
+        private fun buildDatabase(context: Context) = Room.databaseBuilder(
+            context.applicationContext,
+            AppDatabase::class.java,
+            "training_placement_ database").fallbackToDestructiveMigration()
+            .build()
         }
 
-    }
-
-
-
 }
+
+
+
+

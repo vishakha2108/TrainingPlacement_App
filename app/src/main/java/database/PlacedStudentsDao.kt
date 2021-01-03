@@ -10,8 +10,8 @@ interface PlacedStudentsDao
     @Insert
     suspend fun addPlacedStudentDetails(pstud:PlacedStudents)
 
-    @Query("Select count(*) from placed_students ")
-    suspend fun getCount(collname:String):List<PlacedStudents>
+    //@Query("Select count(*) from placed_students ")
+    //suspend fun getCount(collname:String):List<PlacedStudents>
 
 
 
