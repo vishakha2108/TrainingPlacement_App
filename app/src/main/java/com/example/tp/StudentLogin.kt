@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 
 class StudentLogin : Fragment() {
     override fun onCreateView(
@@ -24,6 +25,8 @@ class StudentLogin : Fragment() {
             if (username.text.toString().equals("abc")) {
                 if (password.text.toString().equals("student")) {
                     Toast.makeText(context, "Login Successful", Toast.LENGTH_LONG).show()
+                    view.findNavController().navigate(R.id.action_studentLogin_to_studentDashboard)
+
                 } else {
                     Toast.makeText(context, "Invalid Password ", Toast.LENGTH_LONG).show()
                 }

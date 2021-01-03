@@ -10,21 +10,80 @@
         <action
             android:id="@+id/action_onboarding_to_studentLogin"
             app:destination="@id/studentLogin" />
+        <action
+            android:id="@+id/action_onboarding_to_adminLogin"
+            app:destination="@id/adminLogin" />
     </fragment>
     <fragment
         android:id="@+id/studentLogin"
         android:name="com.example.tp.StudentLogin"
         android:label="StudentLogin">
         <action
-            android:id="@+id/action_studentLogin_to_studentRegistration"
-            app:destination="@id/studentRegistration" />
+            android:id="@+id/action_studentLogin_to_studentDashboard"
+            app:destination="@id/studentDashboard" />
     </fragment>
     <fragment
         android:id="@+id/adminLogin"
         android:name="com.example.tp.AdminLogin"
-        android:label="AdminLogin" />
+        android:label="AdminLogin">
+        <action
+            android:id="@+id/action_adminLogin_to_adminDashboard"
+            app:destination="@id/adminDashboard" />
+    </fragment>
     <fragment
         android:id="@+id/studentRegistration"
         android:name="com.example.tp.StudentRegistration"
         android:label="StudentRegistration" />
+    <fragment
+        android:id="@+id/adminDashboard"
+        android:name="com.example.tp.AdminDashboard"
+        android:label="AdminDashboard">
+        <action
+            android:id="@+id/action_adminDashboard_to_adminAddCompany"
+            app:destination="@id/adminAddCompany" />
+        <action
+            android:id="@+id/action_adminDashboard_to_adminDeleteCompany"
+            app:destination="@id/adminDeleteCompany" />
+        <action
+            android:id="@+id/action_adminDashboard_to_adminViewStudentList"
+            app:destination="@id/adminViewStudentList" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentDashboard"
+        android:name="com.example.tp.StudentDashboard"
+        android:label="StudentDashboard">
+        <action
+            android:id="@+id/action_studentDashboard_to_studentExperience"
+            app:destination="@id/studentExperience" />
+        <action
+            android:id="@+id/action_studentDashboard_to_studentViewExperiences"
+            app:destination="@id/studentViewExperiences" />
+        <action
+            android:id="@+id/action_studentDashboard_to_studentViewCompany"
+            app:destination="@id/studentViewCompany" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentExperience"
+        android:name="com.example.tp.StudentExperience"
+        android:label="StudentExperience" />
+    <fragment
+        android:id="@+id/studentViewExperiences"
+        android:name="com.example.tp.StudentViewExperiences"
+        android:label="StudentViewExperiences" />
+    <fragment
+        android:id="@+id/studentViewCompany"
+        android:name="com.example.tp.StudentViewCompany"
+        android:label="StudentViewCompany" />
+    <fragment
+        android:id="@+id/adminAddCompany"
+        android:name="com.example.tp.AdminAddCompany"
+        android:label="AdminAddCompany" />
+    <fragment
+        android:id="@+id/adminDeleteCompany"
+        android:name="com.example.tp.AdminDeleteCompany"
+        android:label="AdminDeleteCompany" />
+    <fragment
+        android:id="@+id/adminViewStudentList"
+        android:name="com.example.tp.AdminViewStudentList"
+        android:label="AdminViewStudentList" />
 </navigation>
