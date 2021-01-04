@@ -51,4 +51,6 @@
     <string name="reenter_password">RE-ENTER PASSWORD:</string>
     <string name="edit_details">EDIT DETAILS</string>
     <string name="welcome">Welcome</string>
+    <string name="student_name">STUDENT NAME:</string>
+    <string name="experience">EXPERIENCE:</string>
 </resources>
