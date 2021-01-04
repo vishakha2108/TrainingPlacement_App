@@ -35,10 +35,10 @@ class StudentExperience : BaseFragment() {
                 launch {
                     val obj: Experience = Experience(cName, rollNo.toInt(), sName, exp)
                     AppDatabase(requireActivity()).getExperienceDao().addExperience(obj)
-                    Toast.makeText(context, "Experience added", Toast.LENGTH_SHORT)
+                    Toast.makeText(context, "Experience added", Toast.LENGTH_SHORT).show()
                 }
             } else {
-                Toast.makeText(context, "Invalid input", Toast.LENGTH_SHORT)
+                Toast.makeText(context, "Invalid input", Toast.LENGTH_SHORT).show()
             }
         }
 
