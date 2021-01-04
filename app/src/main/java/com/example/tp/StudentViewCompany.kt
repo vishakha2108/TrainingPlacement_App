@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import database.AppDatabase
 import kotlinx.coroutines.launch
 
@@ -13,10 +14,13 @@ class StudentViewCompany : BaseFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        inflater.inflate(R.layout.fragment_student_view_companies, container, false)
+        val view = inflater.inflate(R.layout.fragment_student_view_companies, container, false)
         launch {
             context?.let {
-                val students = AppDatabase(it).getStudentDetailsDao().getStudents()
+                //val students = AppDatabase(it).getStudentDetailsDao().getStudents()
+                val companies = AppDatabase(it).getCompanyDetailsDao().getAllCompanies()
+                view.findViewById<RecyclerView>(R.id.companies_list_view).adapter =
+                    ListAdapter(item = companies)
             }
 
         }

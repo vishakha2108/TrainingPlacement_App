@@ -12,4 +12,7 @@ interface CompanyDetailsDao {
     @Query("delete from company_details where CompanyName = :cname")
     suspend fun delete(cname: String)
 
+    @Query("Select *from company_details")
+    suspend fun getAllCompanies(): List<CompanyDetails>
+
 }
