@@ -19,7 +19,7 @@
     <string name="stream">STREAM:</string>
     <string name="backlogs">BACKLOGS:</string>
     <string name="institution">INSTITUTION:</string>
-    <string name="dashboard">Dashboard</string>
+    <string name="dashboard">CCOEW Dashboard</string>
     <string name="name">Name</string>
     <string name="write_your_experience_here">Write your experience here</string>
     <string name="cancel">Cancel</string>
@@ -49,6 +49,9 @@
     <string name="write_address_here">Write your address here</string>
     <string name="enter_password">ENTER PASSWORD:</string>
     <string name="reenter_password">RE-ENTER PASSWORD:</string>
+    <string name="edit_details">EDIT DETAILS</string>
+    <string name="welcome">Welcome</string>
     <string name="student_name">STUDENT NAME:</string>
     <string name="experience">EXPERIENCE:</string>
+    <string name="no_of_students_placed">NO. OF STUDENTS PLACED</string>
 </resources>

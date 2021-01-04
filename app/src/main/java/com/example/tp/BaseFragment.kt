@@ -7,13 +7,12 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlin.coroutines.CoroutineContext
 
-abstract class BaseFragment : Fragment(), CoroutineScope
-{
+abstract class BaseFragment : Fragment(), CoroutineScope {
     private lateinit var job: Job //background task
 
-    override val coroutineContext : CoroutineContext
-    //context for job - dispatcher thread
-    get() = job+ Dispatchers.Main
+    override val coroutineContext: CoroutineContext
+        //context for job - dispatcher thread
+        get() = job + Dispatchers.Main
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,8 +23,6 @@ abstract class BaseFragment : Fragment(), CoroutineScope
         super.onDestroy()
         job.cancel()
     }
-
-
 
 
 }

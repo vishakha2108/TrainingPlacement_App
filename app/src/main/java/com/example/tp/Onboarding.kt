@@ -15,11 +15,22 @@ class Onboarding : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_onboarding, container, false)
+
+        //sign up as student
+        val registerAsStudent = view.findViewById<Button>(R.id.button_student_signup)
+        registerAsStudent.setOnClickListener {
+            //nav graph command
+            view.findNavController().navigate(R.id.action_onboarding_to_studentRegistration)
+        }
+
+        //log in as student
         val logAsStudent = view.findViewById<Button>(R.id.button_student_login)
         logAsStudent.setOnClickListener {
             //nav graph command
             view.findNavController().navigate(R.id.action_onboarding_to_studentLogin)
         }
+
+        //login as admin
         val logAsAdmin = view.findViewById<Button>(R.id.button_admin_login)
         logAsAdmin.setOnClickListener {
             //nav graph command

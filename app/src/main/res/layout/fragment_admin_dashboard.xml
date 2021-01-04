@@ -9,11 +9,12 @@
         android:id="@+id/section"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_section" />
+        app:layout_constraintTop_toTopOf="@id/admin_icon_header"
+        app:srcCompat="@drawable/ic_section_elongated" />
 
     <ImageView
         android:id="@+id/header_base"
@@ -39,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/playfair_display"
-        android:text="Dashboard"
+        android:text="@string/dashboard"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@id/header_base"
@@ -51,8 +52,10 @@
         android:id="@+id/admin_icon_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="142dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/display_name"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header_base"
         app:srcCompat="@drawable/ic_admin_icon" />
@@ -61,163 +64,48 @@
         android:id="@+id/display_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginStart="4dp"
         android:fontFamily="@font/roboto"
         android:text=""
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@id/admin_icon_header"
+        app:layout_constraintBottom_toBottomOf="@id/admin_icon_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/admin_icon_header"
         app:layout_constraintTop_toTopOf="@id/admin_icon_header" />
-
-    <TextView
-        android:id="@+id/display_designation_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="102dp"
-        android:fontFamily="@font/roboto"
-        android:text="DESIGNATION:"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/display_designation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        android:fontFamily="@font/roboto"
-        android:text=""
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@id/display_designation_label"
-        app:layout_constraintTop_toTopOf="@id/display_designation_label" />
-
-    <TextView
-        android:id="@+id/display_institution_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="78dp"
-        android:layout_marginTop="129dp"
-        android:fontFamily="@font/roboto"
-        android:text="INSTITUTION:"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/display_institution"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:fontFamily="@font/roboto"
-        android:text=""
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@id/display_institution_label"
-        app:layout_constraintTop_toTopOf="@id/display_institution_label" />
-
-    <ImageView
-        android:id="@+id/view_student_list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/section"
-        app:srcCompat="@drawable/ic_students_list" />
-
-    <ImageView
-        android:id="@+id/add_company"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="@id/view_student_list"
-        app:layout_constraintStart_toStartOf="@id/view_student_list"
-        app:layout_constraintTop_toBottomOf="@id/view_student_list"
-        app:srcCompat="@drawable/ic_insert_commpany_details" />
-
-    <ImageView
-        android:id="@+id/delete_company"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="@id/add_company"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/add_company"
-        app:layout_constraintTop_toBottomOf="@id/add_company"
-        app:srcCompat="@drawable/ic_delete_company_from_database" />
-
-    <ImageView
-        android:id="@+id/edit_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/display_designation_label"
-        app:srcCompat="@drawable/ic_edit" />
-
-    <TextView
-        android:id="@+id/edit_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/edit_icon_text"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@id/edit_icon"
-        app:layout_constraintStart_toStartOf="@id/edit_icon"
-        app:layout_constraintTop_toTopOf="@id/edit_icon" />
-
-    <Button
-        android:id="@+id/button_edit_details"
-        android:layout_width="49dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"
-        android:alpha="0"
-        app:layout_constraintBottom_toBottomOf="@id/edit_text"
-        app:layout_constraintEnd_toEndOf="@id/edit_icon"
-        app:layout_constraintStart_toStartOf="@id/edit_icon"
-        app:layout_constraintTop_toTopOf="@id/edit_icon" />
 
     <Button
         android:id="@+id/button_view_student_list"
-        android:layout_width="256dp"
-        android:layout_height="145dp"
-        android:alpha="0"
-        app:layout_constraintBottom_toBottomOf="@id/view_student_list"
-        app:layout_constraintEnd_toEndOf="@id/view_student_list"
-        app:layout_constraintStart_toStartOf="@id/view_student_list"
-        app:layout_constraintTop_toTopOf="@id/view_student_list" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_students_placed"
+        app:layout_constraintBottom_toTopOf="@+id/button_add_company"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/section"
+        app:layout_constraintTop_toTopOf="@id/section"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
         android:id="@+id/button_add_company"
-        android:layout_width="256dp"
-        android:layout_height="145dp"
-        android:alpha="0"
-        app:layout_constraintBottom_toBottomOf="@id/add_company"
-        app:layout_constraintEnd_toEndOf="@id/add_company"
-        app:layout_constraintStart_toStartOf="@id/add_company"
-        app:layout_constraintTop_toTopOf="@id/add_company" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/ic_insert_commpany_details"
+        app:layout_constraintBottom_toTopOf="@+id/button_delete_company"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_view_student_list" />
 
     <Button
         android:id="@+id/button_delete_company"
-        android:layout_width="256dp"
-        android:layout_height="145dp"
-        android:alpha="0"
-        app:layout_constraintBottom_toBottomOf="@id/delete_company"
-        app:layout_constraintEnd_toEndOf="@id/delete_company"
-        app:layout_constraintStart_toStartOf="@id/delete_company"
-        app:layout_constraintTop_toTopOf="@id/delete_company" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_delete_company_from_database"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_add_company" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

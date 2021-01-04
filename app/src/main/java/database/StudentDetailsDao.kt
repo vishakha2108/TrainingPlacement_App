@@ -5,12 +5,12 @@ import androidx.room.Insert
 import androidx.room.Query
 
 @Dao
-interface StudentDetailsDao
-{
+interface StudentDetailsDao {
     @Insert
-    suspend fun addStudentDetails(stud:StudentDetails)
+    suspend fun addStudentDetails(stud: StudentDetails)
+
     @Query("Select*from student_details")
-    suspend fun getStudents():List<StudentDetails>
+    suspend fun getStudents(): List<StudentDetails>
 
 
 }

@@ -2,9 +2,7 @@ package com.example.tp
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
-import android.content.Context
-import android.content.Context.*
-import android.location.Location
+import android.content.Context.NOTIFICATION_SERVICE
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,95 +13,109 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import androidx.core.content.ContextCompat.getSystemService
-import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import database.AppDatabase
 import database.CompanyDetails
 import kotlinx.coroutines.launch
-import java.util.stream.Stream
 
 class AdminAddCompany : BaseFragment() {
-    private var notificationId = 0;
+    private var notificationId = 0
     private val CHANNEL_ID = "Add_company_notification"
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view =  inflater.inflate(R.layout.fragment_admin_add_company, container, false)
-        val s_button :Button= view.findViewById(R.id.button_save)
+        val view = inflater.inflate(R.layout.fragment_admin_add_company, container, false)
+
+        //save button
+        val s_button: Button = view.findViewById(R.id.button_save_add)
         s_button.setOnClickListener {
+            //company name
             val companyName = view.findViewById<EditText>(R.id.company_name).text.toString().trim()
-            var minCgpa = view.findViewById<EditText>(R.id.input_min_cgpa).text.toString().trim().toFloatOrNull()
-            if(minCgpa==null)
-            {
-                minCgpa= 0.0f
+
+            //cgpa
+            var minCgpa = view.findViewById<EditText>(R.id.input_min_cgpa).text.toString().trim()
+                .toFloatOrNull()
+            if (minCgpa == null) {
+                minCgpa = 0.0f
             }
-            var maxBacklogs = view.findViewById<EditText>(R.id.input_max_backlogs).text.toString().trim().toIntOrNull()
-            if(maxBacklogs== null)
-            {
+
+            //backlogs
+            var maxBacklogs =
+                view.findViewById<EditText>(R.id.input_max_backlogs).text.toString().trim()
+                    .toIntOrNull()
+            if (maxBacklogs == null) {
                 maxBacklogs = 0
             }
+
+            //stream
             var stream = view.findViewById<EditText>(R.id.input_streams).text.toString()
-            if(stream== "")
-            {
+            if (stream == "") {
                 stream = "Any"
             }
+
+            //job description
             var jD = view.findViewById<EditText>(R.id.input_job_desc).text.toString()
+
+            //location
             var location = view.findViewById<EditText>(R.id.input_location).text.toString()
-            if(location== "")
-            {
+            if (location == "") {
                 location = "will be informed later"
             }
+
+            //stipend
             var stipend = view.findViewById<EditText>(R.id.input_stipend).text.toString()
-            if(stipend== "")
-            {
+            if (stipend == "") {
                 stipend = "will be informed later"
             }
+
+            //additional info
             var notes = view.findViewById<EditText>(R.id.input_additional_info).toString()
+
             //validation
-            if(companyName!="")
-            {
-                val obj = CompanyDetails(companyName,minCgpa,maxBacklogs,stream,jD, location,stipend,notes)
+            if (companyName != "") {
+                val obj = CompanyDetails(
+                    companyName,
+                    minCgpa,
+                    maxBacklogs,
+                    stream,
+                    jD,
+                    location,
+                    stipend,
+                    notes
+                )
                 launch {
                     context?.let()
                     {
 
                         AppDatabase(requireActivity()).getCompanyDetailsDao().addCompanyDetails(obj)
-                        Toast.makeText(it,"Insert Successful",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(it, "Insert Successful", Toast.LENGTH_SHORT).show()
                         createNotificationChannel()
                         Notify()
-
                     }
-
                 }
+            } else {
+                Toast.makeText(context, "Enter Company Name", Toast.LENGTH_SHORT).show()
             }
-            else
-            {
-                Toast.makeText(context,"Enter Company Name",Toast.LENGTH_SHORT).show()
-            }
-
-
         }
 
-        val cancelButton = view.findViewById<Button>(R.id.button_cancel)
+        //cancel button
+        val cancelButton = view.findViewById<Button>(R.id.button_cancel_add)
         cancelButton.setOnClickListener {
+            Toast.makeText(context, "Changes not saved", Toast.LENGTH_LONG).show()
+
             //nav graph command
+            view.findNavController().navigate(R.id.action_adminAddCompany_to_adminDashboard)
         }
-
         return view
-
-
     }
-    fun Notify()
-    {
+
+    fun Notify() {
         var builder =
             context?.let {
-                NotificationCompat.Builder(it,CHANNEL_ID)
+                NotificationCompat.Builder(it, CHANNEL_ID)
                     .setSmallIcon(R.drawable.ic_next_button)
                     .setContentTitle("New Company Added")
                     .setContentText("Check your eligibility and apply now!!")
@@ -115,11 +127,12 @@ class AdminAddCompany : BaseFragment() {
             }
         }
     }
+
     private fun createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because
         // the NotificationChannel class is new and not in the support library
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val name ="New Company Added"
+            val name = "New Company Added"
             val descriptionText = "Check your eligibility and apply now!!"
             val importance = NotificationManager.IMPORTANCE_DEFAULT
             val channel = NotificationChannel(CHANNEL_ID, name, importance).apply {
@@ -127,15 +140,8 @@ class AdminAddCompany : BaseFragment() {
             }
             // Register the channel with the system
             val notificationManager: NotificationManager =
-               context?.getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+                context?.getSystemService(NOTIFICATION_SERVICE) as NotificationManager
             notificationManager.createNotificationChannel(channel)
         }
     }
-
-
-
-    }
-
-
-
-
+}

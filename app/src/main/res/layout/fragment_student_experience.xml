@@ -41,8 +41,10 @@
         android:id="@+id/write_icon_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="115dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/share_experience_header"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header_base"
         app:srcCompat="@drawable/ic_write_icon" />
@@ -51,83 +53,147 @@
         android:id="@+id/share_experience_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="4dp"
         android:fontFamily="@font/roboto"
         android:text="@string/share_experience"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@id/write_icon_header"
-        app:layout_constraintTop_toTopOf="@id/write_icon_header"
-        app:layout_constraintBottom_toBottomOf="@id/write_icon_header"/>
+        app:layout_constraintBottom_toBottomOf="@id/write_icon_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/write_icon_header"
+        app:layout_constraintTop_toTopOf="@id/write_icon_header" />
 
     <TextView
         android:id="@+id/company_name_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="2dp"
         android:fontFamily="@font/roboto"
         android:text="@string/company_name"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_share_experience"
         app:layout_constraintTop_toBottomOf="@id/write_icon_header" />
 
     <EditText
-        android:id="@+id/company_name"
-        android:layout_width="175dp"
+        android:id="@+id/input_company_name"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="2dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/roboto"
-        android:hint="@string/company_name"
         android:inputType="text"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/company_name_label"
-        app:layout_constraintStart_toEndOf="@id/company_name_label"
+        app:layout_constraintStart_toEndOf="@id/guideline_share_experience"
         app:layout_constraintTop_toTopOf="@id/company_name_label" />
+
+    <TextView
+        android:id="@+id/student_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/student_name"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_share_experience"
+        app:layout_constraintTop_toBottomOf="@id/company_name_label" />
+
+    <EditText
+        android:id="@+id/input_student_name"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/roboto"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/student_name_label"
+        app:layout_constraintStart_toEndOf="@id/guideline_share_experience"
+        app:layout_constraintTop_toTopOf="@id/student_name_label" />
+
+    <TextView
+        android:id="@+id/student_rno_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/roll_no"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_share_experience"
+        app:layout_constraintTop_toBottomOf="@id/student_name_label" />
+
+    <EditText
+        android:id="@+id/input_student_rno"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/roboto"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/student_rno_label"
+        app:layout_constraintStart_toEndOf="@id/guideline_share_experience"
+        app:layout_constraintTop_toTopOf="@id/student_rno_label" />
 
     <EditText
         android:id="@+id/input_share_experience"
         android:layout_width="348dp"
-        android:layout_height="420dp"
+        android:layout_height="400dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:background="@color/white"
+        android:background="@drawable/multiline_input_bg_large"
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/write_your_experience_here"
         android:inputType="textMultiLine"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/company_name_label" />
+        app:layout_constraintTop_toBottomOf="@id/student_rno_label" />
 
     <Button
-        android:id="@+id/button_cancel"
+        android:id="@+id/button_cancel_exp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70sp"
-        android:layout_marginTop="40sp"
-        android:background="@color/grey"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/button_cancel_bg"
         android:text="@string/cancel"
         android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="@id/input_share_experience"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_save_exp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/input_share_experience" />
 
     <Button
-        android:id="@+id/button_save"
+        android:id="@+id/button_save_exp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40sp"
-        android:layout_marginEnd="70sp"
-        android:background="@color/green"
+        android:layout_marginStart="25dp"
+        android:background="@drawable/button_save_bg"
         android:text="@string/save"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@id/input_share_experience"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_cancel_exp"
         app:layout_constraintTop_toBottomOf="@id/input_share_experience" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_share_experience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

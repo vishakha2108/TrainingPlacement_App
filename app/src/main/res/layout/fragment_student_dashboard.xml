@@ -42,8 +42,10 @@
         android:id="@+id/student_icon_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="142dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/display_name"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header_base"
         app:srcCompat="@drawable/ic_student_icon_header" />
@@ -52,187 +54,165 @@
         android:id="@+id/display_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginStart="8dp"
         android:fontFamily="@font/roboto"
         android:text=""
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@id/student_icon_header"
+        app:layout_constraintBottom_toBottomOf="@id/student_icon_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/student_icon_header"
         app:layout_constraintTop_toTopOf="@id/student_icon_header" />
 
     <TextView
         android:id="@+id/display_rollno_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="115dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        android:fontFamily="@font/roboto"
         android:text="@string/roll_no"
-        android:fontFamily="@font/roboto"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/student_icon_header" />
-
-    <TextView
-        android:id="@+id/display_rollno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        android:fontFamily="@font/roboto"
-        android:text=""
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@id/display_rollno_label"
-        app:layout_constraintTop_toTopOf="@id/display_rollno_label" />
+        app:layout_constraintBottom_toTopOf="@+id/display_cgpa_label"
+        app:layout_constraintEnd_toEndOf="@id/guideline_dashboard"
+        app:layout_constraintTop_toBottomOf="@+id/student_icon_header"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/display_cgpa_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto"
+        android:layout_marginEnd="2dp"
         android:text="@string/cgpa"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@id/display_rollno_label"
-        app:layout_constraintTop_toBottomOf="@id/display_rollno_label" />
-
-    <TextView
-        android:id="@+id/display_cgpa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        android:fontFamily="@font/roboto"
-        android:text=""
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@id/display_cgpa_label"
-        app:layout_constraintTop_toTopOf="@id/display_cgpa_label" />
+        app:layout_constraintBottom_toTopOf="@+id/display_stream_label"
+        app:layout_constraintEnd_toEndOf="@id/guideline_dashboard"
+        app:layout_constraintTop_toBottomOf="@+id/display_rollno_label" />
 
     <TextView
         android:id="@+id/display_stream_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
         android:fontFamily="@font/roboto"
         android:text="@string/stream"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@id/display_cgpa_label"
-        app:layout_constraintTop_toBottomOf="@id/display_cgpa_label" />
-
-    <TextView
-        android:id="@+id/display_stream"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        android:fontFamily="@font/roboto"
-        android:text=""
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@id/display_stream_label"
-        app:layout_constraintTop_toTopOf="@id/display_stream_label" />
+        app:layout_constraintBottom_toTopOf="@+id/display_backlogs_label"
+        app:layout_constraintEnd_toEndOf="@id/guideline_dashboard"
+        app:layout_constraintTop_toBottomOf="@+id/display_cgpa_label" />
 
     <TextView
         android:id="@+id/display_backlogs_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto"
+        android:layout_marginEnd="2dp"
         android:text="@string/backlogs"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@id/display_stream_label"
-        app:layout_constraintTop_toBottomOf="@id/display_stream_label" />
+        app:layout_constraintBottom_toTopOf="@+id/section"
+        app:layout_constraintEnd_toEndOf="@id/guideline_dashboard"
+        app:layout_constraintTop_toBottomOf="@+id/display_stream_label" />
+
+    <TextView
+        android:id="@+id/display_rollno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/roboto"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/display_rollno_label"
+        app:layout_constraintStart_toEndOf="@id/display_rollno_label"
+        app:layout_constraintTop_toTopOf="@id/display_rollno_label" />
+
+    <TextView
+        android:id="@+id/display_cgpa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/roboto"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/display_cgpa_label"
+        app:layout_constraintStart_toEndOf="@id/display_cgpa_label"
+        app:layout_constraintTop_toTopOf="@id/display_cgpa_label" />
+
+    <TextView
+        android:id="@+id/display_stream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/roboto"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/display_stream_label"
+        app:layout_constraintStart_toEndOf="@id/display_stream_label"
+        app:layout_constraintTop_toTopOf="@id/display_stream_label" />
 
     <TextView
         android:id="@+id/display_backlogs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginStart="2dp"
         android:fontFamily="@font/roboto"
         android:text=""
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@id/display_backlogs_label"
+        app:layout_constraintBottom_toBottomOf="@id/display_backlogs_label"
         app:layout_constraintTop_toTopOf="@id/display_backlogs_label" />
 
     <ImageView
         android:id="@+id/section"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/display_backlogs_label"
-        app:srcCompat="@drawable/ic_section" />
-
-    <ImageView
-        android:id="@+id/share_experience"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/section"
-        app:srcCompat="@drawable/ic_share_experience" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_section_elongated" />
 
     <Button
         android:id="@+id/button_share_experience"
-        android:layout_width="265dp"
-        android:layout_height="145dp"
-        android:alpha="0"
-        app:layout_constraintBottom_toBottomOf="@id/share_experience"
-        app:layout_constraintEnd_toEndOf="@id/share_experience"
-        app:layout_constraintStart_toStartOf="@id/share_experience"
-        app:layout_constraintTop_toTopOf="@id/share_experience" />
-
-    <ImageView
-        android:id="@+id/view_experience"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:background="@drawable/ic_share_experience"
+        app:layout_constraintBottom_toTopOf="@+id/button_view_experience"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/share_experience"
-        app:srcCompat="@drawable/ic_view_experiences" />
+        app:layout_constraintTop_toTopOf="@+id/section"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
         android:id="@+id/button_view_experience"
-        android:layout_width="265dp"
-        android:layout_height="145dp"
-        android:alpha="0"
-        app:layout_constraintBottom_toBottomOf="@id/view_experience"
-        app:layout_constraintEnd_toEndOf="@id/view_experience"
-        app:layout_constraintStart_toStartOf="@id/view_experience"
-        app:layout_constraintTop_toTopOf="@id/view_experience" />
-
-    <ImageView
-        android:id="@+id/view_companies"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/ic_view_experiences"
+        app:layout_constraintBottom_toTopOf="@+id/button_view_companies"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_experience"
-        app:srcCompat="@drawable/ic_company_details" />
+        app:layout_constraintTop_toBottomOf="@+id/button_share_experience" />
 
     <Button
         android:id="@+id/button_view_companies"
-        android:layout_width="265dp"
-        android:layout_height="145dp"
-        android:alpha="0"
-        app:layout_constraintBottom_toBottomOf="@id/view_companies"
-        app:layout_constraintEnd_toEndOf="@id/view_companies"
-        app:layout_constraintStart_toStartOf="@id/view_companies"
-        app:layout_constraintTop_toTopOf="@id/view_companies" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_company_details"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_view_experience" />
 
     <ImageView
         android:id="@+id/edit_icon"
@@ -260,16 +240,19 @@
     <Button
         android:id="@+id/button_edit_details"
         android:layout_width="49dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"
+        android:layout_height="55dp"
         android:alpha="0"
         app:layout_constraintBottom_toBottomOf="@id/edit_text"
         app:layout_constraintEnd_toEndOf="@id/edit_icon"
         app:layout_constraintStart_toStartOf="@id/edit_icon"
         app:layout_constraintTop_toTopOf="@id/edit_icon" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

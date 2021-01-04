@@ -41,8 +41,10 @@
         android:id="@+id/delete_icon_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/delete_company_header"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header_base"
         app:srcCompat="@drawable/ic_delete_icon" />
@@ -51,13 +53,14 @@
         android:id="@+id/delete_company_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="4dp"
         android:fontFamily="@font/roboto"
         android:text="@string/delete_company_from_database"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/delete_icon_header"
-        app:layout_constraintStart_toEndOf="@id/delete_icon_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/delete_icon_header"
         app:layout_constraintTop_toTopOf="@id/delete_icon_header" />
 
     <TextView
@@ -87,27 +90,31 @@
         app:layout_constraintTop_toBottomOf="@id/company_name_label" />
 
     <Button
-        android:id="@+id/button_delete"
+        android:id="@+id/button_delete_company"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="275dp"
-        android:background="@color/red"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button_delete_bg"
         android:text="@string/delete"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/button_cancel_deletion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/company_name" />
+        app:layout_constraintTop_toBottomOf="@+id/company_name"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
-        android:id="@+id/button_cancel"
+        android:id="@+id/button_cancel_deletion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:background="@color/grey"
+        android:background="@drawable/button_cancel_bg"
         android:text="@string/cancel"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_delete" />
+        app:layout_constraintTop_toBottomOf="@+id/button_delete_company" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
