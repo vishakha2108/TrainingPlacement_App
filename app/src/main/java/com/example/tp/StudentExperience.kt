@@ -43,9 +43,9 @@ class StudentExperience : BaseFragment() {
         //cancel button
         val cancelButton = view.findViewById<Button>(R.id.button_cancel)
         cancelButton.setOnClickListener {
+            Toast.makeText(context, "Changes unsaved", Toast.LENGTH_LONG).show()
             //nav graph command
             view.findNavController().navigate(R.id.action_studentExperience_to_studentDashboard)
-            Toast.makeText(context, "Changes unsaved", Toast.LENGTH_LONG).show()
         }
         return view
     }

@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.navigation.findNavController
 import com.example.tp.BaseFragment
 import com.example.tp.R
 import database.AppDatabase
@@ -48,9 +49,7 @@ class StudentRegistration : BaseFragment() {
                         AppDatabase(requireActivity()).getStudentDetailsDao().addStudentDetails(obj)
                         //println("h3")
                         Toast.makeText(it, "Insert Successful", Toast.LENGTH_SHORT).show()
-
                     }
-
                 }
             } else {
                 Toast.makeText(context, "Details missing", Toast.LENGTH_SHORT).show()
@@ -60,9 +59,8 @@ class StudentRegistration : BaseFragment() {
         //cancel button
         val cancelButton = view.findViewById<Button>(R.id.button_cancel)
         cancelButton.setOnClickListener {
-            //nav graph command
-
-            //view.findNavController().navigate(R.id.action_studentExperience_to_studentDashboard)
+            //  nav graph command
+            view.findNavController().navigate(R.id.action_studentExperience_to_studentDashboard)
             Toast.makeText(context, "Changes unsaved", Toast.LENGTH_LONG).show()
         }
         return view

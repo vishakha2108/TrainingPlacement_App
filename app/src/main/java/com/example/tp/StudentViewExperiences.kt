@@ -18,9 +18,7 @@ class StudentViewExperiences : BaseFragment() {
             context?.let {
                 val experiences = AppDatabase(it).getExperienceDao().getAllExperiences()
             }
-
         }
         return view
-
     }
 }

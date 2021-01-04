@@ -20,15 +20,19 @@ class StudentEdit : Fragment() {
         //cancel
         val cancel = view.findViewById<Button>(R.id.button_cancel)
         cancel.setOnClickListener {
-            view.findNavController().navigate(R.id.action_studentEdit_to_studentDashboard)
             Toast.makeText(context, "Changes unsaved", Toast.LENGTH_LONG).show()
+
+            //nav graph command
+            view.findNavController().navigate(R.id.action_studentEdit_to_studentDashboard)
+
         }
 
         //save
         val save = view.findViewById<Button>(R.id.button_save)
         save.setOnClickListener {
-            view.findNavController().navigate(R.id.action_studentEdit_to_studentDashboard)
             Toast.makeText(context, "Changes saved successfully", Toast.LENGTH_LONG).show()
+            //nav graph command
+            view.findNavController().navigate(R.id.action_studentEdit_to_studentDashboard)
         }
 
         return view.rootView
