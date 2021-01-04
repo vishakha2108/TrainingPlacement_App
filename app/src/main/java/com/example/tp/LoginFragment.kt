@@ -34,7 +34,7 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_onboarding, container, false)
+        return inflater.inflate(R.layout.fragment_admin_add_company, container, false)
     }
 
     companion object {
@@ -57,4 +57,3 @@ class LoginFragment : Fragment() {
             }
     }
 }
-
