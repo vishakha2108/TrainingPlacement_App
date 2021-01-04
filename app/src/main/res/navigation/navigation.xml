@@ -27,7 +27,8 @@
         <action
             android:id="@+id/action_studentLogin_to_studentDashboard"
             app:destination="@id/studentDashboard"
-            app:popUpTo="@id/onboarding" />
+            app:popUpTo="@id/onboarding"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/adminLogin"
@@ -36,7 +37,8 @@
         <action
             android:id="@+id/action_adminLogin_to_adminDashboard"
             app:destination="@id/adminDashboard"
-            app:popUpTo="@id/onboarding" />
+            app:popUpTo="@id/onboarding"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/adminDashboard"
@@ -45,15 +47,18 @@
         <action
             android:id="@+id/action_adminDashboard_to_adminAddCompany"
             app:destination="@id/adminAddCompany"
-            app:popUpTo="@id/adminDashboard" />
+            app:popUpTo="@id/adminDashboard"
+            app:popUpToInclusive="false" />
         <action
             android:id="@+id/action_adminDashboard_to_adminDeleteCompany"
             app:destination="@id/adminDeleteCompany"
-            app:popUpTo="@id/adminDashboard" />
+            app:popUpTo="@id/adminDashboard"
+            app:popUpToInclusive="false" />
         <action
             android:id="@+id/action_adminDashboard_to_adminViewStudentList"
             app:destination="@id/adminViewStudentList"
-            app:popUpTo="@id/adminDashboard" />
+            app:popUpTo="@id/adminDashboard"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/studentDashboard"
@@ -62,15 +67,18 @@
         <action
             android:id="@+id/action_studentDashboard_to_studentExperience"
             app:destination="@id/studentExperience"
-            app:popUpTo="@id/studentDashboard" />
+            app:popUpTo="@id/studentDashboard"
+            app:popUpToInclusive="false" />
         <action
             android:id="@+id/action_studentDashboard_to_studentViewExperiences"
             app:destination="@id/studentViewExperiences"
-            app:popUpTo="@id/studentDashboard" />
+            app:popUpTo="@id/studentDashboard"
+            app:popUpToInclusive="false" />
         <action
             android:id="@+id/action_studentDashboard_to_studentViewCompany"
             app:destination="@id/studentViewCompany"
-            app:popUpTo="@id/studentDashboard" />
+            app:popUpTo="@id/studentDashboard"
+            app:popUpToInclusive="false" />
         <action
             android:id="@+id/action_studentDashboard_to_studentEdit"
             app:destination="@id/studentEdit"
@@ -120,7 +128,8 @@
         <action
             android:id="@+id/action_studentEdit_to_studentDashboard"
             app:destination="@id/studentDashboard"
-            app:popUpTo="@id/studentDashboard" />
+            app:popUpTo="@id/studentDashboard"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/studentRegistration2"
