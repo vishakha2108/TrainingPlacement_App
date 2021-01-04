@@ -21,7 +21,7 @@ class AdminDeleteCompany : BaseFragment() {
         val view = inflater.inflate(R.layout.fragment_admin_delete_company, container, false)
 
         //delete button
-        val buttonDel = view.findViewById<Button>(R.id.button_delete)
+        val buttonDel = view.findViewById<Button>(R.id.button_delete_company)
         //println("h")
         buttonDel.setOnClickListener {
             val CName = view.findViewById<EditText>(R.id.company_name).text.toString().trim()
@@ -52,9 +52,9 @@ class AdminDeleteCompany : BaseFragment() {
         }
 
         //cancel button
-        val cancelButton = view.findViewById<Button>(R.id.button_cancel)
+        val cancelButton = view.findViewById<Button>(R.id.button_cancel_deletion)
         cancelButton.setOnClickListener {
-            Toast.makeText(context, "Changes unsaved", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "Changes not saved", Toast.LENGTH_LONG).show()
             //nav graph command
             view.findNavController().navigate(R.id.action_adminDeleteCompany_to_adminDashboard)
 

@@ -18,7 +18,7 @@ class StudentEdit : Fragment() {
         val view = inflater.inflate(R.layout.fragment_student_edit, container, false)
 
         //cancel
-        val cancel = view.findViewById<Button>(R.id.button_cancel)
+        val cancel = view.findViewById<Button>(R.id.button_cancel_edit)
         cancel.setOnClickListener {
             Toast.makeText(context, "Changes unsaved", Toast.LENGTH_LONG).show()
 
@@ -28,7 +28,7 @@ class StudentEdit : Fragment() {
         }
 
         //save
-        val save = view.findViewById<Button>(R.id.button_save)
+        val save = view.findViewById<Button>(R.id.button_save_edit)
         save.setOnClickListener {
             Toast.makeText(context, "Changes saved successfully", Toast.LENGTH_LONG).show()
             //nav graph command

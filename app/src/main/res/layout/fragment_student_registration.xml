@@ -359,7 +359,7 @@
             app:layout_constraintTop_toBottomOf="@id/address_label" />
 
         <Button
-            android:id="@+id/button_cancel"
+            android:id="@+id/button_cancel_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
@@ -367,13 +367,13 @@
             android:text="@string/cancel"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button_save"
+            app:layout_constraintEnd_toStartOf="@+id/button_save_register"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/input_address" />
 
         <Button
-            android:id="@+id/button_save"
+            android:id="@+id/button_save_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -382,7 +382,7 @@
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/button_cancel"
+            app:layout_constraintStart_toEndOf="@+id/button_cancel_register"
             app:layout_constraintTop_toBottomOf="@id/input_address" />
 
         <androidx.constraintlayout.widget.Guideline

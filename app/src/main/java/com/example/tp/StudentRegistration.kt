@@ -21,7 +21,7 @@ class StudentRegistration : BaseFragment() {
         val view = inflater.inflate(R.layout.fragment_student_registration, container, false)
 
         //save button
-        val sButton: Button = view.findViewById(R.id.button_save)
+        val sButton: Button = view.findViewById(R.id.button_save_register)
         sButton.setOnClickListener {
 
             val studentName = view.findViewById<EditText>(R.id.student_name).text.toString().trim()
@@ -48,7 +48,7 @@ class StudentRegistration : BaseFragment() {
                         AppDatabase(requireActivity()).getStudentDetailsDao().addStudentDetails(obj)
                         Toast.makeText(it, "Insert Successful", Toast.LENGTH_SHORT).show()
                         view.findNavController()
-                            .navigate(R.id.action_studentExperience_to_studentDashboard)
+                            .navigate(R.id.action_studentRegistration_to_studentDashboard)
                     }
                 }
             } else {
@@ -57,7 +57,7 @@ class StudentRegistration : BaseFragment() {
         }
 
         //cancel button
-        val cancelButton = view.findViewById<Button>(R.id.button_cancel)
+        val cancelButton = view.findViewById<Button>(R.id.button_cancel_register)
         cancelButton.setOnClickListener {
             //  nav graph command
             view.findNavController().navigate(R.id.action_studentRegistration_to_onboarding)

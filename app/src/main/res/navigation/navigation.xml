@@ -17,8 +17,7 @@
             app:popUpTo="@id/onboarding" />
         <action
             android:id="@+id/action_onboarding_to_studentRegistration"
-            app:destination="@id/studentRegistration2"
-            app:popUpTo="@id/onboarding" />
+            app:destination="@id/studentRegistration" />
     </fragment>
     <fragment
         android:id="@+id/studentLogin"
@@ -82,7 +81,8 @@
         <action
             android:id="@+id/action_studentDashboard_to_studentEdit"
             app:destination="@id/studentEdit"
-            app:popUpTo="@id/studentDashboard" />
+            app:popUpTo="@id/studentDashboard"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/studentExperience"
@@ -107,7 +107,8 @@
         android:label="AdminAddCompany">
         <action
             android:id="@+id/action_adminAddCompany_to_adminDashboard"
-            app:destination="@id/adminDashboard" />
+            app:destination="@id/adminDashboard"
+            app:popUpTo="@id/adminDashboard" />
     </fragment>
     <fragment
         android:id="@+id/adminDeleteCompany"
@@ -115,12 +116,19 @@
         android:label="AdminDeleteCompany">
         <action
             android:id="@+id/action_adminDeleteCompany_to_adminDashboard"
-            app:destination="@id/adminDashboard" />
+            app:destination="@id/adminDashboard"
+            app:popUpTo="@id/adminDashboard" />
     </fragment>
     <fragment
         android:id="@+id/adminViewStudentList"
         android:name="com.example.tp.AdminViewStudentList"
-        android:label="AdminViewStudentList" />
+        android:label="AdminViewStudentList"
+        app:popUpToInclusive="false">
+        <action
+            android:id="@+id/action_adminViewStudentList_to_adminDashboard"
+            app:destination="@id/adminDashboard"
+            app:popUpTo="@id/adminDashboard" />
+    </fragment>
     <fragment
         android:id="@+id/studentEdit"
         android:name="com.example.tp.StudentEdit"
@@ -132,11 +140,18 @@
             app:popUpToInclusive="false" />
     </fragment>
     <fragment
-        android:id="@+id/studentRegistration2"
+        android:id="@+id/studentRegistration"
         android:name="StudentRegistration"
         android:label="StudentRegistration">
         <action
+            android:id="@+id/action_studentRegistration_to_studentDashboard"
+            app:destination="@id/studentDashboard"
+            app:popUpTo="@id/onboarding"
+            app:popUpToInclusive="true" />
+        <action
             android:id="@+id/action_studentRegistration_to_onboarding"
-            app:destination="@id/onboarding" />
+            app:destination="@id/onboarding"
+            app:popUpTo="@id/onboarding"
+            app:popUpToInclusive="false" />
     </fragment>
 </navigation>
