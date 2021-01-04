@@ -1,5 +1,9 @@
 package com.example.tp
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context.NOTIFICATION_SERVICE
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,12 +11,17 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import androidx.navigation.findNavController
 import database.AppDatabase
 import database.CompanyDetails
 import kotlinx.coroutines.launch
 
 class AdminAddCompany : BaseFragment() {
+    private var notificationId = 0
+    private val CHANNEL_ID = "Add_company_notification"
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -83,6 +92,8 @@ class AdminAddCompany : BaseFragment() {
 
                         AppDatabase(requireActivity()).getCompanyDetailsDao().addCompanyDetails(obj)
                         Toast.makeText(it, "Insert Successful", Toast.LENGTH_SHORT).show()
+                        createNotificationChannel()
+                        Notify()
                     }
                 }
             } else {
@@ -99,5 +110,38 @@ class AdminAddCompany : BaseFragment() {
             view.findNavController().navigate(R.id.action_adminAddCompany_to_adminDashboard)
         }
         return view
+    }
+
+    fun Notify() {
+        var builder =
+            context?.let {
+                NotificationCompat.Builder(it, CHANNEL_ID)
+                    .setSmallIcon(R.drawable.ic_next_button)
+                    .setContentTitle("New Company Added")
+                    .setContentText("Check your eligibility and apply now!!")
+                    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            }
+        with(context?.let { NotificationManagerCompat.from(it) }) {
+            if (builder != null) {
+                this?.notify(notificationId, builder.build())
+            }
+        }
+    }
+
+    private fun createNotificationChannel() {
+        // Create the NotificationChannel, but only on API 26+ because
+        // the NotificationChannel class is new and not in the support library
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name = "New Company Added"
+            val descriptionText = "Check your eligibility and apply now!!"
+            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val channel = NotificationChannel(CHANNEL_ID, name, importance).apply {
+                description = descriptionText
+            }
+            // Register the channel with the system
+            val notificationManager: NotificationManager =
+                context?.getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+        }
     }
 }
