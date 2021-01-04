@@ -65,20 +65,20 @@
         android:id="@+id/student_name_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_marginEnd="2dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/roboto"
         android:text="@string/full_name"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_edit"
         app:layout_constraintTop_toBottomOf="@id/edit_icon_header" />
 
     <EditText
         android:id="@+id/student_name"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="2dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/roboto"
         android:inputType="text"
@@ -86,26 +86,27 @@
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/student_name_label"
-        app:layout_constraintStart_toEndOf="@id/student_name_label"
+        app:layout_constraintStart_toEndOf="@id/guideline_edit"
         app:layout_constraintTop_toTopOf="@id/student_name_label" />
 
     <TextView
         android:id="@+id/password1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
         android:fontFamily="@font/roboto"
         android:text="@string/enter_password"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/student_name_label"
+        app:layout_constraintEnd_toEndOf="@id/guideline_edit"
         app:layout_constraintTop_toBottomOf="@id/student_name_label" />
 
     <EditText
         android:id="@+id/input_password1"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="2dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/roboto"
         android:inputType="textPassword"
@@ -113,26 +114,27 @@
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/password1"
-        app:layout_constraintStart_toEndOf="@id/password1"
+        app:layout_constraintStart_toEndOf="@id/guideline_edit"
         app:layout_constraintTop_toTopOf="@id/password1" />
 
     <TextView
         android:id="@+id/password2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
         android:fontFamily="@font/roboto"
         android:text="@string/reenter_password"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/password1"
+        app:layout_constraintEnd_toEndOf="@id/guideline_edit"
         app:layout_constraintTop_toBottomOf="@id/password1" />
 
     <EditText
         android:id="@+id/input_password2"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="2dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/roboto"
         android:inputType="textPassword"
@@ -140,7 +142,7 @@
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/password2"
-        app:layout_constraintStart_toEndOf="@id/password2"
+        app:layout_constraintStart_toEndOf="@id/guideline_edit"
         app:layout_constraintTop_toTopOf="@id/password2" />
 
     <ImageView
@@ -171,18 +173,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="2dp"
         android:fontFamily="@font/roboto"
         android:text="@string/cgpa"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/student_name_label"
+        app:layout_constraintEnd_toEndOf="@id/guideline_edit"
         app:layout_constraintTop_toBottomOf="@id/student_details" />
 
     <EditText
         android:id="@+id/input_cgpa"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="2dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/roboto"
         android:inputType="text"
@@ -190,7 +193,7 @@
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/cgpa_label"
-        app:layout_constraintStart_toEndOf="@id/cgpa_label"
+        app:layout_constraintStart_toEndOf="@id/guideline_edit"
         app:layout_constraintTop_toTopOf="@id/cgpa_label" />
 
     <TextView
@@ -198,18 +201,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
         android:fontFamily="@font/roboto"
         android:text="@string/backlogs"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/cgpa_label"
+        app:layout_constraintEnd_toEndOf="@id/guideline_edit"
         app:layout_constraintTop_toBottomOf="@id/cgpa_label" />
 
     <EditText
         android:id="@+id/input_backlogs"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="2dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/roboto"
         android:inputType="text"
@@ -217,26 +221,27 @@
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/backlogs_label"
-        app:layout_constraintStart_toEndOf="@id/backlogs_label"
+        app:layout_constraintStart_toEndOf="@id/guideline_edit"
         app:layout_constraintTop_toTopOf="@id/backlogs_label" />
 
     <TextView
         android:id="@+id/stream_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/roboto"
         android:text="@string/stream"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/backlogs_label"
+        app:layout_constraintEnd_toEndOf="@id/guideline_edit"
         app:layout_constraintTop_toBottomOf="@id/backlogs_label" />
 
     <EditText
         android:id="@+id/input_stream"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="2dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/roboto"
         android:inputType="text"
@@ -244,7 +249,7 @@
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/stream_label"
-        app:layout_constraintStart_toEndOf="@id/stream_label"
+        app:layout_constraintStart_toEndOf="@id/guideline_edit"
         app:layout_constraintTop_toTopOf="@id/stream_label" />
 
     <TextView
@@ -252,18 +257,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
         android:fontFamily="@font/roboto"
         android:text="@string/roll_no"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/stream_label"
+        app:layout_constraintEnd_toEndOf="@id/guideline_edit"
         app:layout_constraintTop_toBottomOf="@id/stream_label" />
 
     <EditText
         android:id="@+id/input_rno"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="2dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/roboto"
         android:inputType="text"
@@ -271,7 +277,7 @@
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/rno_label"
-        app:layout_constraintStart_toEndOf="@id/rno_label"
+        app:layout_constraintStart_toEndOf="@id/guideline_edit"
         app:layout_constraintTop_toTopOf="@id/rno_label" />
 
     <ImageView
@@ -302,18 +308,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="2dp"
         android:fontFamily="@font/roboto"
         android:text="@string/contact_no"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/rno_label"
+        app:layout_constraintEnd_toEndOf="@id/guideline_edit"
         app:layout_constraintTop_toBottomOf="@id/contact_info" />
 
     <EditText
         android:id="@+id/input_contactno"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="2dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/roboto"
         android:inputType="text"
@@ -321,7 +328,7 @@
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/contact_label"
-        app:layout_constraintStart_toEndOf="@id/contact_label"
+        app:layout_constraintStart_toEndOf="@id/guideline_edit"
         app:layout_constraintTop_toTopOf="@id/contact_label" />
 
     <TextView
@@ -381,6 +388,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_cancel"
         app:layout_constraintTop_toBottomOf="@id/input_address" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

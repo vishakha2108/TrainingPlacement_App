@@ -67,27 +67,27 @@
         android:id="@+id/company_name_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
         android:layout_marginTop="40dp"
+        android:layout_marginEnd="2dp"
         android:fontFamily="@font/roboto"
         android:text="@string/company_name"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_share_experience"
         app:layout_constraintTop_toBottomOf="@id/write_icon_header" />
 
     <EditText
         android:id="@+id/company_name"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="2dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/roboto"
         android:inputType="text"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/company_name_label"
-        app:layout_constraintStart_toEndOf="@id/company_name_label"
+        app:layout_constraintStart_toEndOf="@id/guideline_share_experience"
         app:layout_constraintTop_toTopOf="@id/company_name_label" />
 
     <EditText
@@ -131,5 +131,12 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@id/input_share_experience"
         app:layout_constraintTop_toBottomOf="@id/input_share_experience" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_share_experience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
