@@ -41,8 +41,10 @@
         android:id="@+id/write_icon_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="115dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/share_experience_header"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header_base"
         app:srcCompat="@drawable/ic_write_icon" />
@@ -51,14 +53,15 @@
         android:id="@+id/share_experience_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="4dp"
         android:fontFamily="@font/roboto"
         android:text="@string/share_experience"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@id/write_icon_header"
-        app:layout_constraintTop_toTopOf="@id/write_icon_header"
-        app:layout_constraintBottom_toBottomOf="@id/write_icon_header"/>
+        app:layout_constraintBottom_toBottomOf="@id/write_icon_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/write_icon_header"
+        app:layout_constraintTop_toTopOf="@id/write_icon_header" />
 
     <TextView
         android:id="@+id/company_name_label"
@@ -94,13 +97,13 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:background="@drawable/multiline_input_bg"
+        android:background="@drawable/multiline_input_bg_large"
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/write_your_experience_here"
         android:inputType="textMultiLine"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/company_name_label" />
