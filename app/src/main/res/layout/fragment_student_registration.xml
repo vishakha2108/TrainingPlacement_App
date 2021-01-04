@@ -1,373 +1,378 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/gradient">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.navigation.StudentRegistration">
 
-    <ImageView
-        android:id="@+id/header_base"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_header_base" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient">
 
-    <ImageView
-        android:id="@+id/menu_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@id/header_base"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/header_base"
-        app:srcCompat="@drawable/ic_menu" />
+        <ImageView
+            android:id="@+id/header_base"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_header_base" />
 
-    <TextView
-        android:id="@+id/welcome_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/playfair_display"
-        android:text="Welcome"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@id/header_base"
-        app:layout_constraintEnd_toEndOf="@id/header_base"
-        app:layout_constraintStart_toStartOf="@id/header_base"
-        app:layout_constraintTop_toTopOf="@id/header_base" />
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/header_base"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/header_base"
+            app:srcCompat="@drawable/ic_menu" />
 
-    <ImageView
-        android:id="@+id/student_icon_header"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header_base"
-        app:srcCompat="@drawable/ic_student_icon" />
+        <TextView
+            android:id="@+id/welcome_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/playfair_display"
+            android:text="@string/welcome"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@id/header_base"
+            app:layout_constraintEnd_toEndOf="@id/header_base"
+            app:layout_constraintStart_toStartOf="@id/header_base"
+            app:layout_constraintTop_toTopOf="@id/header_base" />
 
-    <TextView
-        android:id="@+id/student_registration_header"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/student_registration"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@id/student_icon_header"
-        app:layout_constraintStart_toEndOf="@id/student_icon_header"
-        app:layout_constraintTop_toTopOf="@id/student_icon_header" />
+        <ImageView
+            android:id="@+id/student_icon_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_base"
+            app:srcCompat="@drawable/ic_student_icon" />
 
-    <TextView
-        android:id="@+id/student_name_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/full_name"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/student_icon_header" />
+        <TextView
+            android:id="@+id/student_registration_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/student_registration"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/student_icon_header"
+            app:layout_constraintStart_toEndOf="@id/student_icon_header"
+            app:layout_constraintTop_toTopOf="@id/student_icon_header" />
 
-    <EditText
-        android:id="@+id/student_name"
-        android:layout_width="175dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:backgroundTint="@color/white"
-        android:fontFamily="@font/roboto"
-        android:inputType="text"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/student_name_label"
-        app:layout_constraintStart_toEndOf="@id/student_name_label"
-        app:layout_constraintTop_toTopOf="@id/student_name_label" />
+        <TextView
+            android:id="@+id/student_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/full_name"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/student_icon_header" />
 
-    <TextView
-        android:id="@+id/password1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/enter_password"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/student_name_label"
-        app:layout_constraintTop_toBottomOf="@id/student_name_label" />
+        <EditText
+            android:id="@+id/student_name"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/roboto"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/student_name_label"
+            app:layout_constraintStart_toEndOf="@id/student_name_label"
+            app:layout_constraintTop_toTopOf="@id/student_name_label" />
 
-    <EditText
-        android:id="@+id/input_password1"
-        android:layout_width="175dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:backgroundTint="@color/white"
-        android:fontFamily="@font/roboto"
-        android:inputType="textPassword"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/password1"
-        app:layout_constraintStart_toEndOf="@id/password1"
-        app:layout_constraintTop_toTopOf="@id/password1" />
+        <TextView
+            android:id="@+id/password1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/enter_password"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/student_name_label"
+            app:layout_constraintTop_toBottomOf="@id/student_name_label" />
 
-    <TextView
-        android:id="@+id/password2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/reenter_password"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/password1"
-        app:layout_constraintTop_toBottomOf="@id/password1" />
+        <EditText
+            android:id="@+id/input_password1"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/roboto"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/password1"
+            app:layout_constraintStart_toEndOf="@id/password1"
+            app:layout_constraintTop_toTopOf="@id/password1" />
 
-    <EditText
-        android:id="@+id/input_password2"
-        android:layout_width="175dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:backgroundTint="@color/white"
-        android:fontFamily="@font/roboto"
-        android:inputType="textPassword"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/password2"
-        app:layout_constraintStart_toEndOf="@id/password2"
-        app:layout_constraintTop_toTopOf="@id/password2" />
+        <TextView
+            android:id="@+id/password2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/reenter_password"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/password1"
+            app:layout_constraintTop_toBottomOf="@id/password1" />
 
-    <ImageView
-        android:id="@+id/separator1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password2"
-        app:srcCompat="@drawable/ic_separator" />
+        <EditText
+            android:id="@+id/input_password2"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/roboto"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/password2"
+            app:layout_constraintStart_toEndOf="@id/password2"
+            app:layout_constraintTop_toTopOf="@id/password2" />
 
-    <TextView
-        android:id="@+id/student_details"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/student_details"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/separator1" />
+        <ImageView
+            android:id="@+id/separator1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password2"
+            app:srcCompat="@drawable/ic_separator" />
 
-    <TextView
-        android:id="@+id/cgpa_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/cgpa"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/student_name_label"
-        app:layout_constraintTop_toBottomOf="@id/student_details" />
+        <TextView
+            android:id="@+id/student_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/student_details"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/separator1" />
 
-    <EditText
-        android:id="@+id/input_cgpa"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:backgroundTint="@color/white"
-        android:fontFamily="@font/roboto"
-        android:inputType="numberDecimal"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/cgpa_label"
-        app:layout_constraintStart_toEndOf="@id/cgpa_label"
-        app:layout_constraintTop_toTopOf="@id/cgpa_label" />
+        <TextView
+            android:id="@+id/cgpa_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/cgpa"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/student_name_label"
+            app:layout_constraintTop_toBottomOf="@id/student_details" />
 
-    <TextView
-        android:id="@+id/backlogs_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/backlogs"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/cgpa_label"
-        app:layout_constraintTop_toBottomOf="@id/cgpa_label" />
+        <EditText
+            android:id="@+id/input_cgpa"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/roboto"
+            android:inputType="numberDecimal"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/cgpa_label"
+            app:layout_constraintStart_toEndOf="@id/cgpa_label"
+            app:layout_constraintTop_toTopOf="@id/cgpa_label" />
 
-    <EditText
-        android:id="@+id/input_backlogs"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:backgroundTint="@color/white"
-        android:fontFamily="@font/roboto"
-        android:inputType="text"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/backlogs_label"
-        app:layout_constraintStart_toEndOf="@id/backlogs_label"
-        app:layout_constraintTop_toTopOf="@id/backlogs_label" />
+        <TextView
+            android:id="@+id/backlogs_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/backlogs"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/cgpa_label"
+            app:layout_constraintTop_toBottomOf="@id/cgpa_label" />
 
-    <TextView
-        android:id="@+id/stream_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/stream"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/backlogs_label"
-        app:layout_constraintTop_toBottomOf="@id/backlogs_label" />
+        <EditText
+            android:id="@+id/input_backlogs"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/roboto"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/backlogs_label"
+            app:layout_constraintStart_toEndOf="@id/backlogs_label"
+            app:layout_constraintTop_toTopOf="@id/backlogs_label" />
 
-    <EditText
-        android:id="@+id/input_stream"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:backgroundTint="@color/white"
-        android:fontFamily="@font/roboto"
-        android:inputType="text"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/stream_label"
-        app:layout_constraintStart_toEndOf="@id/stream_label"
-        app:layout_constraintTop_toTopOf="@id/stream_label" />
+        <TextView
+            android:id="@+id/stream_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/stream"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/backlogs_label"
+            app:layout_constraintTop_toBottomOf="@id/backlogs_label" />
 
-    <TextView
-        android:id="@+id/rno_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/roll_no"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/stream_label"
-        app:layout_constraintTop_toBottomOf="@id/stream_label" />
+        <EditText
+            android:id="@+id/input_stream"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/roboto"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/stream_label"
+            app:layout_constraintStart_toEndOf="@id/stream_label"
+            app:layout_constraintTop_toTopOf="@id/stream_label" />
 
-    <EditText
-        android:id="@+id/input_rno"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:backgroundTint="@color/white"
-        android:fontFamily="@font/roboto"
-        android:inputType="text"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/rno_label"
-        app:layout_constraintStart_toEndOf="@id/rno_label"
-        app:layout_constraintTop_toTopOf="@id/rno_label" />
+        <TextView
+            android:id="@+id/rno_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/roll_no"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/stream_label"
+            app:layout_constraintTop_toBottomOf="@id/stream_label" />
 
-    <ImageView
-        android:id="@+id/separator2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rno_label"
-        app:srcCompat="@drawable/ic_separator" />
+        <EditText
+            android:id="@+id/input_rno"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/roboto"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/rno_label"
+            app:layout_constraintStart_toEndOf="@id/rno_label"
+            app:layout_constraintTop_toTopOf="@id/rno_label" />
 
-    <TextView
-        android:id="@+id/contact_info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/contact_information"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/separator2" />
+        <ImageView
+            android:id="@+id/separator2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rno_label"
+            app:srcCompat="@drawable/ic_separator" />
 
-    <TextView
-        android:id="@+id/contact_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/contact_no"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/rno_label"
-        app:layout_constraintTop_toBottomOf="@id/contact_info" />
+        <TextView
+            android:id="@+id/contact_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/contact_information"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/separator2" />
 
-    <EditText
-        android:id="@+id/input_contactno"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:backgroundTint="@color/white"
-        android:fontFamily="@font/roboto"
-        android:inputType="text"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/contact_label"
-        app:layout_constraintStart_toEndOf="@id/contact_label"
-        app:layout_constraintTop_toTopOf="@id/contact_label" />
+        <TextView
+            android:id="@+id/contact_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/contact_no"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/rno_label"
+            app:layout_constraintTop_toBottomOf="@id/contact_info" />
 
-    <TextView
-        android:id="@+id/address_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/address"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/contact_label" />
+        <EditText
+            android:id="@+id/input_contactno"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/roboto"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/contact_label"
+            app:layout_constraintStart_toEndOf="@id/contact_label"
+            app:layout_constraintTop_toTopOf="@id/contact_label" />
 
-    <EditText
-        android:id="@+id/input_address"
-        android:layout_width="348dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:background="@drawable/multiline_input_bg"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="@string/write_address_here"
-        android:inputType="textMultiLine"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/address_label" />
+        <TextView
+            android:id="@+id/address_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/address"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contact_label" />
 
-    <Button
-        android:id="@+id/button_cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70sp"
-        android:layout_marginTop="40sp"
-        android:background="@color/grey"
-        android:text="@string/cancel"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="@id/input_address"
-        app:layout_constraintTop_toBottomOf="@id/input_address" />
+        <EditText
+            android:id="@+id/input_address"
+            android:layout_width="348dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/multiline_input_bg"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/write_address_here"
+            android:inputType="textMultiLine"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address_label" />
 
-    <Button
-        android:id="@+id/button_save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40sp"
-        android:layout_marginEnd="70sp"
-        android:background="@color/green"
-        android:text="@string/save"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@id/input_address"
-        app:layout_constraintTop_toBottomOf="@id/input_address" />
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70sp"
+            android:layout_marginTop="40sp"
+            android:background="@color/grey"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/input_address"
+            app:layout_constraintTop_toBottomOf="@id/input_address" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40sp"
+            android:layout_marginEnd="70sp"
+            android:background="@color/green"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/input_address"
+            app:layout_constraintTop_toBottomOf="@id/input_address" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
