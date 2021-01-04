@@ -67,7 +67,7 @@
         android:id="@+id/company_name_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="2dp"
         android:fontFamily="@font/roboto"
         android:text="@string/company_name"
@@ -90,12 +90,66 @@
         app:layout_constraintStart_toEndOf="@id/guideline_share_experience"
         app:layout_constraintTop_toTopOf="@id/company_name_label" />
 
+    <TextView
+        android:id="@+id/student_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/student_name"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_share_experience"
+        app:layout_constraintTop_toBottomOf="@id/company_name_label" />
+
+    <EditText
+        android:id="@+id/input_student_name"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/roboto"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/student_name_label"
+        app:layout_constraintStart_toEndOf="@id/guideline_share_experience"
+        app:layout_constraintTop_toTopOf="@id/student_name_label" />
+
+    <TextView
+        android:id="@+id/student_rno_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/roll_no"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_share_experience"
+        app:layout_constraintTop_toBottomOf="@id/student_name_label" />
+
+    <EditText
+        android:id="@+id/input_student_rno"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/roboto"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/student_rno_label"
+        app:layout_constraintStart_toEndOf="@id/guideline_share_experience"
+        app:layout_constraintTop_toTopOf="@id/student_rno_label" />
+
     <EditText
         android:id="@+id/input_share_experience"
         android:layout_width="348dp"
-        android:layout_height="420dp"
+        android:layout_height="400dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/multiline_input_bg_large"
         android:ems="10"
@@ -106,30 +160,30 @@
         android:paddingRight="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/company_name_label" />
+        app:layout_constraintTop_toBottomOf="@id/student_rno_label" />
 
     <Button
         android:id="@+id/button_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70sp"
-        android:layout_marginTop="40sp"
         android:background="@drawable/button_cancel_bg"
         android:text="@string/cancel"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@id/input_share_experience"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/input_share_experience" />
 
     <Button
         android:id="@+id/button_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40sp"
         android:layout_marginEnd="70sp"
         android:background="@drawable/button_save_bg"
         android:text="@string/save"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@id/input_share_experience"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/input_share_experience" />
 
     <androidx.constraintlayout.widget.Guideline

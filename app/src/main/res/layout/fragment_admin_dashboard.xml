@@ -78,7 +78,7 @@
         android:id="@+id/button_view_student_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_students_list"
+        android:background="@drawable/ic_students_placed"
         app:layout_constraintBottom_toTopOf="@+id/button_add_company"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

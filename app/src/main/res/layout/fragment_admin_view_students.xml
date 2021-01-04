@@ -38,7 +38,7 @@
         app:layout_constraintTop_toTopOf="@id/header_base" />
 
     <ImageView
-        android:id="@+id/list_icon_header"
+        android:id="@+id/winner_icon_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
@@ -47,7 +47,7 @@
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header_base"
-        app:srcCompat="@drawable/ic_details_icon_header" />
+        app:srcCompat="@drawable/ic_winner" />
 
     <TextView
         android:id="@+id/view_students_list"
@@ -55,13 +55,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:fontFamily="@font/roboto"
-        android:text="@string/view_students_list"
+        android:text="@string/no_of_students_placed"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/list_icon_header"
+        app:layout_constraintBottom_toBottomOf="@id/winner_icon_header"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/list_icon_header"
-        app:layout_constraintTop_toTopOf="@id/list_icon_header" />
+        app:layout_constraintStart_toEndOf="@+id/winner_icon_header"
+        app:layout_constraintTop_toTopOf="@id/winner_icon_header" />
 
     <ImageView
         android:id="@+id/section_elongated"

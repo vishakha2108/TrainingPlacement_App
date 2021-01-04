@@ -53,4 +53,5 @@
     <string name="welcome">Welcome</string>
     <string name="student_name">STUDENT NAME:</string>
     <string name="experience">EXPERIENCE:</string>
+    <string name="no_of_students_placed">NO. OF STUDENTS PLACED</string>
 </resources>
