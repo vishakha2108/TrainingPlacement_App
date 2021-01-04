@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_onboarding_to_adminLogin"
             app:destination="@id/adminLogin" />
+        <action
+            android:id="@+id/action_onboarding_to_studentRegistration"
+            app:destination="@id/studentRegistration" />
     </fragment>
     <fragment
         android:id="@+id/studentLogin"

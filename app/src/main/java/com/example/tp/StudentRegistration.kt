@@ -45,10 +45,10 @@ class StudentRegistration : BaseFragment() {
                 launch {
                     context?.let()
                     {
-                        //println("h2")
                         AppDatabase(requireActivity()).getStudentDetailsDao().addStudentDetails(obj)
-                        //println("h3")
                         Toast.makeText(it, "Insert Successful", Toast.LENGTH_SHORT).show()
+                        view.findNavController()
+                            .navigate(R.id.action_studentExperience_to_studentDashboard)
                     }
                 }
             } else {

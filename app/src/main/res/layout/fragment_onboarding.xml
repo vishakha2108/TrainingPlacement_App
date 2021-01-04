@@ -30,15 +30,25 @@
         app:srcCompat="@drawable/ic_section_elongated" />
 
     <Button
+        android:id="@+id/button_student_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_student_signup"
+        app:layout_constraintBottom_toTopOf="@id/button_student_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/section"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
         android:id="@+id/button_student_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_student_login"
         app:layout_constraintBottom_toTopOf="@id/button_admin_login"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/section"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_student_signup" />
 
     <Button
         android:id="@+id/button_admin_login"
@@ -46,9 +56,8 @@
         android:layout_height="wrap_content"
         android:background="@drawable/ic_admin_login"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button_student_login" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
