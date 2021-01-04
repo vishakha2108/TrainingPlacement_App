@@ -31,6 +31,7 @@ class StudentDashboard : Fragment() {
             //nav graph command
             view.findNavController().navigate(R.id.action_studentDashboard_to_studentViewCompany)
         }
+
         return view.rootView
     }
 }

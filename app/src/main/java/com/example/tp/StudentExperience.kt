@@ -24,20 +24,20 @@ class StudentExperience : BaseFragment() {
             val cName = view.findViewById<EditText>(R.id.company_name).text.toString().trim()
             val exp = view.findViewById<EditText>(R.id.input_share_experience).text.toString().trim()
             //
-            //val sName = view.findViewById<EditText>(R.id.student_name).text.toString().trim()
-            //val rollNo = view.findViewById<EditText>(R.id.roll_no).text.toString().trim()
+            val sName = view.findViewById<EditText>(R.id.student_name).text.toString().trim()
+            val rollNo = view.findViewById<EditText>(R.id.roll_no).text.toString().trim()
             //validation
-            if(cName!=""&&exp!="")//&&sName!=""&&rollNo!="")
+            if(cName!=""&&exp!=""&&sName!=""&&rollNo!="")
             {
                 launch {
-                    //val obj : Experience = Experience(cName,rollNo.toInt(),sName,exp)
-                    //AppDatabase(requireActivity()).getExperienceDao().addExperience(obj)
-                    Toast.makeText(context,"Experience added. Thank you",Toast.LENGTH_SHORT)
+                    val obj : Experience = Experience(cName,rollNo.toInt(),sName,exp)
+                    AppDatabase(requireActivity()).getExperienceDao().addExperience(obj)
+                    Toast.makeText(context,"Experience added. Thank you",Toast.LENGTH_SHORT).show()
                 }
             }
             else
             {
-                Toast.makeText(context,"Invalid Company Name",Toast.LENGTH_SHORT)
+                Toast.makeText(context,"Invalid Company Name",Toast.LENGTH_SHORT).show()
             }
         }
         val cancelButton = view.findViewById<Button>(R.id.button_cancel)
