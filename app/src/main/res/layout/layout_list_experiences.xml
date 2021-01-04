@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -14,16 +13,16 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:background="@color/green">
+            android:background="@color/green"
+            android:padding="20dp">
 
             <TextView
                 android:id="@+id/company_name_label_list_experiences"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="@string/company_name"
                 android:fontFamily="@font/roboto"
+                android:text="@string/company_name"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -35,16 +34,16 @@
                 android:layout_toEndOf="@id/company_name_label_list_experiences"
                 android:fontFamily="@font/roboto"
                 android:textColor="@color/white"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/roll_no_label_exp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_below="@+id/company_name_label_list_experiences"
-                android:text="@string/roll_no"
+                android:layout_marginBottom="8dp"
                 android:fontFamily="@font/roboto"
+                android:text="@string/roll_no"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -52,21 +51,21 @@
                 android:id="@+id/roll_no"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_below="@+id/company_title_exp"
+                android:layout_marginBottom="8dp"
                 android:layout_toEndOf="@id/roll_no_label_exp"
                 android:fontFamily="@font/roboto"
                 android:textColor="@color/white"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/student_name_label_list_experiences"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_below="@+id/roll_no_label_exp"
-                android:text="@string/student_name"
+                android:layout_marginBottom="8dp"
                 android:fontFamily="@font/roboto"
+                android:text="@string/student_name"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -74,21 +73,21 @@
                 android:id="@+id/student_name_exp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_below="@+id/roll_no"
+                android:layout_marginBottom="8dp"
                 android:layout_toEndOf="@id/company_name_label_list_experiences"
                 android:fontFamily="@font/roboto"
                 android:textColor="@color/white"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/experience_label_list_experiences"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_below="@+id/student_name_label_list_experiences"
-                android:text="@string/experience"
+                android:layout_marginBottom="8dp"
                 android:fontFamily="@font/roboto"
+                android:text="@string/experience"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -96,12 +95,12 @@
                 android:id="@+id/experience"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_below="@+id/student_name_exp"
+                android:layout_marginBottom="8dp"
                 android:layout_toEndOf="@id/experience_label_list_experiences"
                 android:fontFamily="@font/roboto"
                 android:textColor="@color/white"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
 
 
         </RelativeLayout>

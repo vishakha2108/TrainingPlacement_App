@@ -1,21 +1,18 @@
 package database
 
 import androidx.room.Dao
-import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 
 @Dao
-interface CompanyDetailsDao
-{
+interface CompanyDetailsDao {
     @Insert
-    suspend fun addCompanyDetails(company : CompanyDetails)
+    suspend fun addCompanyDetails(company: CompanyDetails)
 
     @Query("delete from company_details where CompanyName = :cname")
-    suspend fun delete(cname : String)
+    suspend fun delete(cname: String)
 
     @Query("Select *from company_details")
-    suspend fun getAllCompanies():List<CompanyDetails>
+    suspend fun getAllCompanies(): List<CompanyDetails>
 
 }
-

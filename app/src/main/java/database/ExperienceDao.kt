@@ -8,12 +8,13 @@ import androidx.room.Query
 interface ExperienceDao
 {
     @Insert
-    suspend fun addExperience(experience : Experience)
+    suspend fun addExperience(experience: Experience)
 
     @Query("Select count(*) from experience")
-    suspend fun getNoOfStudents():Int
+    suspend fun getNoOfStudents(): Int
+
     @Query("Select * from experience")
-    suspend fun getAllExperiences():List<Experience>
+    suspend fun getAllExperiences(): List<Experience>
 
 
 }

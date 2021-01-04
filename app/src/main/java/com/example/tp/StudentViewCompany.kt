@@ -4,10 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import database.AppDatabase
-import database.CompanyDetails
 import kotlinx.coroutines.launch
 
 class StudentViewCompany : BaseFragment() {
@@ -21,7 +19,8 @@ class StudentViewCompany : BaseFragment() {
             context?.let {
                 //val students = AppDatabase(it).getStudentDetailsDao().getStudents()
                 val companies = AppDatabase(it).getCompanyDetailsDao().getAllCompanies()
-                view.findViewById<RecyclerView>(R.id.companies_list_view).adapter = ListAdapter(item = companies)
+                view.findViewById<RecyclerView>(R.id.companies_list_view).adapter =
+                    ListAdapter(item = companies)
             }
 
         }

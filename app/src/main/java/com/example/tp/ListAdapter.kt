@@ -7,9 +7,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import database.CompanyDetails
 
-class ListAdapter (private val item: List<CompanyDetails>): RecyclerView.Adapter <ListAdapter.ListViewHolder> () {
+class ListAdapter(private val item: List<CompanyDetails>) :
+    RecyclerView.Adapter<ListAdapter.ListViewHolder>() {
 
-    class ListViewHolder (val view: View): RecyclerView.ViewHolder (view)
+    class ListViewHolder(val view: View) : RecyclerView.ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListAdapter.ListViewHolder {
         return ListAdapter.ListViewHolder(
@@ -24,7 +25,8 @@ class ListAdapter (private val item: List<CompanyDetails>): RecyclerView.Adapter
 
         holder.view.findViewById<TextView>(R.id.company_title).text = item[position].CompanyName
         holder.view.findViewById<TextView>(R.id.min_cgpa).text = item[position].MinCgpa.toString()
-        holder.view.findViewById<TextView>(R.id.max_backlog).text = item[position].MaxBacklogs.toString()
+        holder.view.findViewById<TextView>(R.id.max_backlog).text =
+            item[position].MaxBacklogs.toString()
         holder.view.findViewById<TextView>(R.id.stream).text = item[position].Stream
         holder.view.findViewById<TextView>(R.id.job_description).text = item[position].JD
         holder.view.findViewById<TextView>(R.id.location).text = item[position].Location

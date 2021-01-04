@@ -25,11 +25,11 @@
         app:srcCompat="@drawable/ic_menu" />
 
     <TextView
-        android:id="@+id/admin_name"
+        android:id="@+id/welcome_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/playfair_display"
-        android:text=""
+        android:text="@string/welcome"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@id/header_base"
@@ -38,57 +38,112 @@
         app:layout_constraintTop_toTopOf="@id/header_base" />
 
     <ImageView
-        android:id="@+id/write_icon_header"
+        android:id="@+id/edit_icon_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintEnd_toStartOf="@+id/company_details_header"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/edit_details_header"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header_base"
-        app:srcCompat="@drawable/ic_write_icon" />
+        app:srcCompat="@drawable/ic_edit" />
 
     <TextView
-        android:id="@+id/company_details_header"
+        android:id="@+id/edit_details_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
         android:fontFamily="@font/roboto"
-        android:text="@string/company_details"
+        android:text="@string/edit_details"
         android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/write_icon_header"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/edit_icon_header"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/write_icon_header"
-        app:layout_constraintTop_toTopOf="@id/write_icon_header" />
+        app:layout_constraintStart_toEndOf="@+id/edit_icon_header"
+        app:layout_constraintTop_toTopOf="@id/edit_icon_header" />
 
     <TextView
-        android:id="@+id/company_name_label"
+        android:id="@+id/student_name_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="2dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/roboto"
-        android:text="@string/company_name"
+        android:text="@string/full_name"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@id/guideline_add_company"
-        app:layout_constraintTop_toBottomOf="@id/write_icon_header" />
+        app:layout_constraintEnd_toEndOf="@id/guideline_edit"
+        app:layout_constraintTop_toBottomOf="@id/edit_icon_header" />
 
     <EditText
-        android:id="@+id/company_name"
+        android:id="@+id/student_name"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/roboto"
         android:inputType="text"
+        android:text=""
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/company_name_label"
-        app:layout_constraintStart_toEndOf="@id/guideline_add_company"
-        app:layout_constraintTop_toTopOf="@id/company_name_label" />
+        app:layout_constraintBottom_toBottomOf="@id/student_name_label"
+        app:layout_constraintStart_toEndOf="@id/guideline_edit"
+        app:layout_constraintTop_toTopOf="@id/student_name_label" />
+
+    <TextView
+        android:id="@+id/password1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/enter_password"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_edit"
+        app:layout_constraintTop_toBottomOf="@id/student_name_label" />
+
+    <EditText
+        android:id="@+id/input_password1"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/roboto"
+        android:inputType="textPassword"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/password1"
+        app:layout_constraintStart_toEndOf="@id/guideline_edit"
+        app:layout_constraintTop_toTopOf="@id/password1" />
+
+    <TextView
+        android:id="@+id/password2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/reenter_password"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_edit"
+        app:layout_constraintTop_toBottomOf="@id/password1" />
+
+    <EditText
+        android:id="@+id/input_password2"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/roboto"
+        android:inputType="textPassword"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/password2"
+        app:layout_constraintStart_toEndOf="@id/guideline_edit"
+        app:layout_constraintTop_toTopOf="@id/password2" />
 
     <ImageView
         android:id="@+id/separator1"
@@ -97,102 +152,133 @@
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/company_name_label"
+        app:layout_constraintTop_toBottomOf="@+id/password2"
         app:srcCompat="@drawable/ic_separator" />
 
     <TextView
-        android:id="@+id/eligibility_criteria"
+        android:id="@+id/student_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/roboto"
-        android:text="@string/eligibility_criteria"
+        android:text="@string/student_details"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/separator1" />
 
     <TextView
-        android:id="@+id/min_cgpa_label"
+        android:id="@+id/cgpa_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="2dp"
         android:fontFamily="@font/roboto"
-        android:text="@string/min_cgpa"
+        android:text="@string/cgpa"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@id/guideline_add_company"
-        app:layout_constraintTop_toBottomOf="@id/eligibility_criteria" />
+        app:layout_constraintEnd_toEndOf="@id/guideline_edit"
+        app:layout_constraintTop_toBottomOf="@id/student_details" />
 
     <EditText
-        android:id="@+id/input_min_cgpa"
+        android:id="@+id/input_cgpa"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/roboto"
         android:inputType="text"
+        android:text=""
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/min_cgpa_label"
-        app:layout_constraintStart_toEndOf="@id/guideline_add_company"
-        app:layout_constraintTop_toTopOf="@id/min_cgpa_label" />
+        app:layout_constraintBottom_toBottomOf="@id/cgpa_label"
+        app:layout_constraintStart_toEndOf="@id/guideline_edit"
+        app:layout_constraintTop_toTopOf="@id/cgpa_label" />
 
     <TextView
-        android:id="@+id/max_backlogs_label"
+        android:id="@+id/backlogs_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="2dp"
         android:fontFamily="@font/roboto"
-        android:text="@string/max_backlogs"
+        android:text="@string/backlogs"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/guideline_add_company"
-        app:layout_constraintTop_toBottomOf="@id/min_cgpa_label" />
+        app:layout_constraintEnd_toEndOf="@id/guideline_edit"
+        app:layout_constraintTop_toBottomOf="@id/cgpa_label" />
 
     <EditText
-        android:id="@+id/input_max_backlogs"
+        android:id="@+id/input_backlogs"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/roboto"
         android:inputType="text"
+        android:text=""
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/max_backlogs_label"
-        app:layout_constraintStart_toEndOf="@id/guideline_add_company"
-        app:layout_constraintTop_toTopOf="@id/max_backlogs_label" />
+        app:layout_constraintBottom_toBottomOf="@id/backlogs_label"
+        app:layout_constraintStart_toEndOf="@id/guideline_edit"
+        app:layout_constraintTop_toTopOf="@id/backlogs_label" />
 
     <TextView
-        android:id="@+id/streams_label"
+        android:id="@+id/stream_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/stream"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_edit"
+        app:layout_constraintTop_toBottomOf="@id/backlogs_label" />
+
+    <EditText
+        android:id="@+id/input_stream"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/roboto"
+        android:inputType="text"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/stream_label"
+        app:layout_constraintStart_toEndOf="@id/guideline_edit"
+        app:layout_constraintTop_toTopOf="@id/stream_label" />
+
+    <TextView
+        android:id="@+id/rno_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="2dp"
         android:fontFamily="@font/roboto"
-        android:text="@string/streams"
+        android:text="@string/roll_no"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/guideline_add_company"
-        app:layout_constraintTop_toBottomOf="@id/max_backlogs_label" />
+        app:layout_constraintEnd_toEndOf="@id/guideline_edit"
+        app:layout_constraintTop_toBottomOf="@id/stream_label" />
 
     <EditText
-        android:id="@+id/input_streams"
+        android:id="@+id/input_rno"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/roboto"
         android:inputType="text"
+        android:text=""
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/streams_label"
-        app:layout_constraintStart_toEndOf="@id/guideline_add_company"
-        app:layout_constraintTop_toTopOf="@id/streams_label" />
+        app:layout_constraintBottom_toBottomOf="@id/rno_label"
+        app:layout_constraintStart_toEndOf="@id/guideline_edit"
+        app:layout_constraintTop_toTopOf="@id/rno_label" />
 
     <ImageView
         android:id="@+id/separator2"
@@ -201,128 +287,65 @@
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/streams_label"
+        app:layout_constraintTop_toBottomOf="@+id/rno_label"
         app:srcCompat="@drawable/ic_separator" />
 
     <TextView
-        android:id="@+id/job_details"
+        android:id="@+id/contact_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/roboto"
-        android:text="@string/job_details"
+        android:text="@string/contact_information"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/separator2" />
 
     <TextView
-        android:id="@+id/job_desc_label"
+        android:id="@+id/contact_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="2dp"
         android:fontFamily="@font/roboto"
-        android:text="@string/job_description"
+        android:text="@string/contact_no"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/guideline_add_company"
-        app:layout_constraintTop_toBottomOf="@id/job_details" />
+        app:layout_constraintEnd_toEndOf="@id/guideline_edit"
+        app:layout_constraintTop_toBottomOf="@id/contact_info" />
 
     <EditText
-        android:id="@+id/input_job_desc"
+        android:id="@+id/input_contactno"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/roboto"
         android:inputType="text"
+        android:text=""
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/job_desc_label"
-        app:layout_constraintStart_toEndOf="@id/guideline_add_company"
-        app:layout_constraintTop_toTopOf="@id/job_desc_label" />
+        app:layout_constraintBottom_toBottomOf="@id/contact_label"
+        app:layout_constraintStart_toEndOf="@id/guideline_edit"
+        app:layout_constraintTop_toTopOf="@id/contact_label" />
 
     <TextView
-        android:id="@+id/location_label"
+        android:id="@+id/address_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="2dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/roboto"
-        android:text="@string/location"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/guideline_add_company"
-        app:layout_constraintTop_toBottomOf="@id/job_desc_label" />
-
-    <EditText
-        android:id="@+id/input_location"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:backgroundTint="@color/white"
-        android:fontFamily="@font/roboto"
-        android:inputType="text"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/location_label"
-        app:layout_constraintStart_toEndOf="@id/guideline_add_company"
-        app:layout_constraintTop_toTopOf="@id/location_label" />
-
-    <TextView
-        android:id="@+id/stipend_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="2dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/stipend"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/guideline_add_company"
-        app:layout_constraintTop_toBottomOf="@id/location_label" />
-
-    <EditText
-        android:id="@+id/input_stipend"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:backgroundTint="@color/white"
-        android:fontFamily="@font/roboto"
-        android:inputType="text"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/stipend_label"
-        app:layout_constraintStart_toEndOf="@id/guideline_add_company"
-        app:layout_constraintTop_toTopOf="@id/stipend_label" />
-
-    <ImageView
-        android:id="@+id/separator3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/stipend_label"
-        app:srcCompat="@drawable/ic_separator" />
-
-    <TextView
-        android:id="@+id/additional_info_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/additional_details"
+        android:text="@string/address"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/separator3" />
+        app:layout_constraintTop_toBottomOf="@id/contact_label" />
 
     <EditText
-        android:id="@+id/input_additional_info"
+        android:id="@+id/input_address"
         android:layout_width="348dp"
         android:layout_height="120dp"
         android:layout_marginStart="10dp"
@@ -331,16 +354,16 @@
         android:background="@drawable/multiline_input_bg"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="@string/write_additional_details_here"
         android:inputType="textMultiLine"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/additional_info_label" />
+        app:layout_constraintTop_toBottomOf="@id/address_label" />
 
     <Button
-        android:id="@+id/button_cancel_add"
+        android:id="@+id/button_cancel_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
@@ -348,30 +371,30 @@
         android:text="@string/cancel"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_save_add"
+        app:layout_constraintEnd_toStartOf="@+id/button_save_edit"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/input_additional_info" />
+        app:layout_constraintTop_toBottomOf="@id/input_address" />
 
     <Button
-        android:id="@+id/button_save_add"
+        android:id="@+id/button_save_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:background="@drawable/button_save_bg"
-        android:clickable="true"
         android:text="@string/save"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_cancel_add"
-        app:layout_constraintTop_toBottomOf="@id/input_additional_info" />
+        app:layout_constraintStart_toEndOf="@+id/button_cancel_edit"
+        app:layout_constraintTop_toBottomOf="@id/input_address" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_add_company"
+        android:id="@+id/guideline_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
