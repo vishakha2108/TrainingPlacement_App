@@ -17,7 +17,7 @@ class StudentViewCompany : BaseFragment() {
          inflater.inflate(R.layout.fragment_student_view_companies, container, false)
         launch {
             context?.let {
-                val students = AppDatabase(it).getStudentDetailsDao().getStudents()
+                val companies = AppDatabase(it).getCompanyDetailsDao().getAllCompanies()
             }
 
         }
