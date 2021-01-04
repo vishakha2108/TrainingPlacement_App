@@ -60,9 +60,8 @@ class StudentRegistration : BaseFragment() {
         val cancelButton = view.findViewById<Button>(R.id.button_cancel)
         cancelButton.setOnClickListener {
             //  nav graph command
-            view.findNavController().navigate(R.id.action_studentExperience_to_studentDashboard)
-            Toast.makeText(context, "Changes unsaved", Toast.LENGTH_LONG).show()
+            view.findNavController().navigate(R.id.action_studentRegistration_to_onboarding)
         }
-        return view
+        return view.rootView
     }
 }
