@@ -8,6 +8,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.navigation.findNavController
+import database.AppDatabase
+import database.Experience
 import kotlinx.coroutines.launch
 
 class StudentExperience : BaseFragment() {
@@ -24,15 +26,14 @@ class StudentExperience : BaseFragment() {
             val cName = view.findViewById<EditText>(R.id.company_name).text.toString().trim()
             val exp =
                 view.findViewById<EditText>(R.id.input_share_experience).text.toString().trim()
-            //
-            //val sName = view.findViewById<EditText>(R.id.student_name).text.toString().trim()
-            //val rollNo = view.findViewById<EditText>(R.id.roll_no).text.toString().trim()
+
+            val sName = view.findViewById<EditText>(R.id.input_student_name).text.toString().trim()
+            val rollNo = view.findViewById<EditText>(R.id.input_student_rno).text.toString().trim()
             //validation
-            if (cName != "" && exp != "")//&&sName!=""&&rollNo!="")
-            {
+            if (cName != "" && exp != "" && sName != "" && rollNo != "") {
                 launch {
-                    //val obj : Experience = Experience(cName,rollNo.toInt(),sName,exp)
-                    //AppDatabase(requireActivity()).getExperienceDao().addExperience(obj)
+                    val obj: Experience = Experience(cName, rollNo.toInt(), sName, exp)
+                    AppDatabase(requireActivity()).getExperienceDao().addExperience(obj)
                     Toast.makeText(context, "Experience added. Thank you", Toast.LENGTH_SHORT)
                 }
             } else {
