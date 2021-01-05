@@ -96,11 +96,19 @@
     <fragment
         android:id="@+id/studentViewExperiences"
         android:name="com.example.tp.StudentViewExperiences"
-        android:label="StudentViewExperiences" />
+        android:label="StudentViewExperiences">
+        <action
+            android:id="@+id/action_studentViewExperiences_to_studentDashboard"
+            app:destination="@id/studentDashboard" />
+    </fragment>
     <fragment
         android:id="@+id/studentViewCompany"
         android:name="com.example.tp.StudentViewCompany"
-        android:label="StudentViewCompany" />
+        android:label="StudentViewCompany">
+        <action
+            android:id="@+id/action_studentViewCompany_to_studentDashboard"
+            app:destination="@id/studentDashboard" />
+    </fragment>
     <fragment
         android:id="@+id/adminAddCompany"
         android:name="com.example.tp.AdminAddCompany"
