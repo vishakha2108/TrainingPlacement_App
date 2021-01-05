@@ -148,9 +148,11 @@
 
         <ImageView
             android:id="@+id/separator1"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/password2"
@@ -279,9 +281,11 @@
 
         <ImageView
             android:id="@+id/separator2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rno_label"
@@ -342,11 +346,11 @@
 
         <EditText
             android:id="@+id/input_address"
-            android:layout_width="348dp"
-            android:layout_height="120dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/multiline_input_bg"
             android:ems="10"
             android:gravity="start|top"
@@ -354,6 +358,7 @@
             android:inputType="textMultiLine"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
+            app:layout_constraintBottom_toTopOf="@id/button_cancel_register"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/address_label" />
@@ -363,6 +368,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/button_cancel_bg"
             android:text="@string/cancel"
             android:textColor="@color/white"
@@ -377,6 +384,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/button_save_bg"
             android:text="@string/save"
             android:textColor="@color/white"

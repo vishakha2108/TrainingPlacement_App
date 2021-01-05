@@ -76,20 +76,25 @@
 
     <Button
         android:id="@+id/button_view_student_list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/ic_students_placed"
         app:layout_constraintBottom_toTopOf="@+id/button_add_company"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/section"
         app:layout_constraintTop_toTopOf="@id/section"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
         android:id="@+id/button_add_company"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/ic_insert_commpany_details"
@@ -100,8 +105,11 @@
 
     <Button
         android:id="@+id/button_delete_company"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/ic_delete_company_from_database"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
