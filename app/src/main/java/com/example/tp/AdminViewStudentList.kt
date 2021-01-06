@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import androidx.navigation.findNavController
 import database.AppDatabase
 import kotlinx.coroutines.launch
 
@@ -20,6 +22,13 @@ class AdminViewStudentList : BaseFragment() {
 
             ans.text =
                 AppDatabase(requireActivity()).getExperienceDao().getNoOfStudents().toString()
+        }
+
+        //back button
+        val backButton = view.findViewById<Button>(R.id.button_back)
+        backButton.setOnClickListener {
+            //nav graph command
+            view.findNavController().navigate(R.id.action_adminViewStudentList_to_adminDashboard)
         }
 
         return view
