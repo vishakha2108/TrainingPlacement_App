@@ -16,23 +16,23 @@
         app:srcCompat="@drawable/ic_header_base" />
 
     <ImageView
-        android:id="@+id/menu_icon"
+        android:id="@+id/app_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="5dp"
         app:layout_constraintBottom_toBottomOf="@id/header_base"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/header_base"
-        app:srcCompat="@drawable/ic_menu" />
+        app:srcCompat="@drawable/ic_logo_icon" />
 
     <TextView
-        android:id="@+id/dashboard_text"
+        android:id="@+id/student_dashboard_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/playfair_display"
-        android:text="@string/dashboard"
+        android:text="Student Dashboard"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@id/header_base"
         app:layout_constraintEnd_toEndOf="@id/header_base"
         app:layout_constraintStart_toStartOf="@id/header_base"
@@ -40,145 +40,28 @@
 
     <ImageView
         android:id="@+id/student_icon_header"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/display_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/section"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header_base"
         app:srcCompat="@drawable/ic_student_icon_header" />
-
-    <TextView
-        android:id="@+id/display_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:fontFamily="@font/roboto"
-        android:text=""
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@id/student_icon_header"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/student_icon_header"
-        app:layout_constraintTop_toTopOf="@id/student_icon_header" />
-
-    <TextView
-        android:id="@+id/display_rollno_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="2dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/roll_no"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/display_cgpa_label"
-        app:layout_constraintEnd_toEndOf="@id/guideline_dashboard"
-        app:layout_constraintTop_toBottomOf="@+id/student_icon_header"
-        app:layout_constraintVertical_chainStyle="packed" />
-
-    <TextView
-        android:id="@+id/display_cgpa_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto"
-        android:layout_marginEnd="2dp"
-        android:text="@string/cgpa"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/display_stream_label"
-        app:layout_constraintEnd_toEndOf="@id/guideline_dashboard"
-        app:layout_constraintTop_toBottomOf="@+id/display_rollno_label" />
-
-    <TextView
-        android:id="@+id/display_stream_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="2dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/stream"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/display_backlogs_label"
-        app:layout_constraintEnd_toEndOf="@id/guideline_dashboard"
-        app:layout_constraintTop_toBottomOf="@+id/display_cgpa_label" />
-
-    <TextView
-        android:id="@+id/display_backlogs_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto"
-        android:layout_marginEnd="2dp"
-        android:text="@string/backlogs"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/section"
-        app:layout_constraintEnd_toEndOf="@id/guideline_dashboard"
-        app:layout_constraintTop_toBottomOf="@+id/display_stream_label" />
-
-    <TextView
-        android:id="@+id/display_rollno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:fontFamily="@font/roboto"
-        android:text=""
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@id/display_rollno_label"
-        app:layout_constraintStart_toEndOf="@id/display_rollno_label"
-        app:layout_constraintTop_toTopOf="@id/display_rollno_label" />
-
-    <TextView
-        android:id="@+id/display_cgpa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:fontFamily="@font/roboto"
-        android:text=""
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@id/display_cgpa_label"
-        app:layout_constraintStart_toEndOf="@id/display_cgpa_label"
-        app:layout_constraintTop_toTopOf="@id/display_cgpa_label" />
-
-    <TextView
-        android:id="@+id/display_stream"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:fontFamily="@font/roboto"
-        android:text=""
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@id/display_stream_label"
-        app:layout_constraintStart_toEndOf="@id/display_stream_label"
-        app:layout_constraintTop_toTopOf="@id/display_stream_label" />
-
-    <TextView
-        android:id="@+id/display_backlogs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:fontFamily="@font/roboto"
-        android:text=""
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@id/display_backlogs_label"
-        app:layout_constraintBottom_toBottomOf="@id/display_backlogs_label"
-        app:layout_constraintTop_toTopOf="@id/display_backlogs_label" />
 
     <ImageView
         android:id="@+id/section"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="250dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@id/student_icon_header"
         app:srcCompat="@drawable/ic_section_elongated" />
 
     <Button
@@ -186,7 +69,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="75dp"
         android:layout_marginEnd="100dp"
         android:background="@drawable/ic_share_experience"
         app:layout_constraintBottom_toTopOf="@+id/button_view_experience"
@@ -215,45 +98,12 @@
         android:layout_height="0dp"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="100dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="75dp"
         android:background="@drawable/ic_company_details"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_view_experience" />
-
-    <ImageView
-        android:id="@+id/edit_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/display_rollno_label"
-        app:srcCompat="@drawable/ic_edit" />
-
-    <TextView
-        android:id="@+id/edit_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/edit_icon_text"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@id/edit_icon"
-        app:layout_constraintStart_toStartOf="@id/edit_icon"
-        app:layout_constraintTop_toTopOf="@id/edit_icon" />
-
-    <Button
-        android:id="@+id/button_edit_details"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:alpha="0"
-        app:layout_constraintBottom_toBottomOf="@id/edit_text"
-        app:layout_constraintEnd_toEndOf="@id/edit_icon"
-        app:layout_constraintStart_toStartOf="@id/edit_icon"
-        app:layout_constraintTop_toTopOf="@id/edit_icon" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_dashboard"

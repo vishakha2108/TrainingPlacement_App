@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import database.AppDatabase
 import kotlinx.coroutines.launch
@@ -24,6 +26,14 @@ class StudentViewCompany : BaseFragment() {
             }
 
         }
+
+        //back button
+        val backButton = view.findViewById<Button>(R.id.button_back)
+        backButton.setOnClickListener {
+            //nav graph command
+            view.findNavController().navigate(R.id.action_studentViewCompany_to_studentDashboard)
+        }
+
         return view
     }
 }

@@ -49,6 +49,13 @@ class StudentExperience : BaseFragment() {
             //nav graph command
             view.findNavController().navigate(R.id.action_studentExperience_to_studentDashboard)
         }
+
+        //back button
+        val backButton = view.findViewById<Button>(R.id.button_back)
+        backButton.setOnClickListener {
+            //nav graph command
+            view.findNavController().navigate(R.id.action_studentExperience_to_studentDashboard)
+        }
         return view
     }
 }

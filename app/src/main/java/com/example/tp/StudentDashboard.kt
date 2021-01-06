@@ -38,12 +38,6 @@ class StudentDashboard : Fragment() {
             view.findNavController().navigate(R.id.action_studentDashboard_to_studentViewCompany)
         }
 
-        //edit details
-        val edit = view.findViewById<Button>(R.id.button_edit_details)
-        edit.setOnClickListener {
-            //nav graph command
-            view.findNavController().navigate(R.id.action_studentDashboard_to_studentEdit)
-        }
         return view.rootView
     }
 }

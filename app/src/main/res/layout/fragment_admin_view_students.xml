@@ -15,34 +15,41 @@
         app:srcCompat="@drawable/ic_header_base" />
 
     <ImageView
-        android:id="@+id/menu_icon"
+        android:id="@+id/back_arrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@id/header_base"
+        android:layout_marginStart="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/header_base"
-        app:srcCompat="@drawable/ic_menu" />
+        android:background="@drawable/ic_back_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/header_base" />
 
-    <TextView
-        android:id="@+id/admin_name"
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="@id/back_arrow"
+        app:layout_constraintEnd_toEndOf="@id/back_arrow"
+        app:layout_constraintStart_toStartOf="@id/back_arrow"
+        app:layout_constraintTop_toTopOf="@id/back_arrow" />
+
+    <ImageView
+        android:id="@+id/app_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/playfair_display"
-        android:text=""
-        android:textColor="@color/white"
-        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@id/header_base"
-        app:layout_constraintEnd_toEndOf="@id/header_base"
-        app:layout_constraintStart_toStartOf="@id/header_base"
-        app:layout_constraintTop_toTopOf="@id/header_base" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/header_base"
+        app:srcCompat="@drawable/ic_logo_icon" />
 
     <ImageView
         android:id="@+id/winner_icon_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
         app:layout_constraintEnd_toStartOf="@+id/view_students_list"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,31 +85,30 @@
         android:id="@+id/students_placed_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="10dp"
         android:fontFamily="@font/playfair_display"
         android:text="@string/number_of_students_placed"
         android:textColor="@color/white"
-        android:textSize="22sp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/no_students"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/section_elongated"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/no_students"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/playfair_display"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/header_base" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="50dp"
-        android:fontFamily="@font/playfair_display"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/students_placed_label"
-        app:layout_constraintStart_toStartOf="@+id/section_elongated"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/students_placed_label" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

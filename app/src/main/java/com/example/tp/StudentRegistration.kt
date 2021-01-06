@@ -62,6 +62,13 @@ class StudentRegistration : BaseFragment() {
             //  nav graph command
             view.findNavController().navigate(R.id.action_studentRegistration_to_onboarding)
         }
+
+        //back button
+        val backButton = view.findViewById<Button>(R.id.button_back)
+        backButton.setOnClickListener {
+            //nav graph command
+            view.findNavController().navigate(R.id.action_studentRegistration_to_onboarding)
+        }
         return view.rootView
     }
 }
