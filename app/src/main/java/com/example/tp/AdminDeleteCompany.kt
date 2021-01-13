@@ -9,8 +9,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.navigation.findNavController
-import database.AppDatabase
-import kotlinx.coroutines.launch
 
 class AdminDeleteCompany : BaseFragment() {
     override fun onCreateView(
@@ -30,14 +28,14 @@ class AdminDeleteCompany : BaseFragment() {
                     setTitle("Are you sure you want to delete this company's record")
                     setMessage("This operation cannot be undone")
                     setPositiveButton("Yes") { _, _ ->
-                        launch {
-                            AppDatabase(context).getCompanyDetailsDao().delete(CName)
-                            Toast.makeText(context, "Company Deleted", Toast.LENGTH_SHORT).show()
+
+                            ref.child("Companies").child(CName).removeValue().addOnCompleteListener(){
+                            Toast.makeText(context, "Company Deleted", Toast.LENGTH_SHORT).show()}
 
                             //nav graph command
                             view.findNavController()
                                 .navigate(R.id.action_adminDeleteCompany_to_adminDashboard)
-                        }
+
 
                     }
                     setNegativeButton("No")

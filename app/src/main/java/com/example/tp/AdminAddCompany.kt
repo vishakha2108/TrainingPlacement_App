@@ -14,11 +14,10 @@ import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.navigation.findNavController
-import database.AppDatabase
 import database.CompanyDetails
-import kotlinx.coroutines.launch
 
 class AdminAddCompany : BaseFragment() {
+
     private var notificationId = 0
     private val CHANNEL_ID = "Add_company_notification"
 
@@ -72,7 +71,7 @@ class AdminAddCompany : BaseFragment() {
             }
 
             //additional info
-            var notes = view.findViewById<EditText>(R.id.input_additional_info).toString()
+            var notes = view.findViewById<EditText>(R.id.input_additional_info).text.toString()
 
             //validation
             if (companyName != "") {
@@ -86,15 +85,10 @@ class AdminAddCompany : BaseFragment() {
                     stipend,
                     notes
                 )
-                launch {
-                    context?.let()
-                    {
-
-                        AppDatabase(requireActivity()).getCompanyDetailsDao().addCompanyDetails(obj)
-                        Toast.makeText(it, "Insert Successful", Toast.LENGTH_SHORT).show()
-                        createNotificationChannel()
-                        Notify()
-                    }
+                ref.child("Companies").child(companyName).setValue(obj).addOnCompleteListener()
+                {
+                    Toast.makeText(context, "Insert Successful", Toast.LENGTH_SHORT).show()
+                    Notify()
                 }
             } else {
                 Toast.makeText(context, "Enter Company Name", Toast.LENGTH_SHORT).show()
@@ -105,6 +99,8 @@ class AdminAddCompany : BaseFragment() {
         val cancelButton = view.findViewById<Button>(R.id.button_cancel_add)
         cancelButton.setOnClickListener {
             Toast.makeText(context, "Changes not saved", Toast.LENGTH_LONG).show()
+            createNotificationChannel()
+            Notify()
 
             //nav graph command
             view.findNavController().navigate(R.id.action_adminAddCompany_to_adminDashboard)

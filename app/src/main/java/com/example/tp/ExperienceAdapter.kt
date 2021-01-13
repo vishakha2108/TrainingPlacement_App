@@ -25,11 +25,11 @@ class ExperienceAdapter(private val experience_item: List<Experience>) :
     override fun onBindViewHolder(holder: ExperienceViewHolder, position: Int) {
 
         holder.view.findViewById<TextView>(R.id.company_title_exp).text =
-            experience_item[position].CompanyName
+            experience_item[position].companyName
         holder.view.findViewById<TextView>(R.id.roll_no).text =
-            experience_item[position].RollNo.toString()
+            experience_item[position].rollNo.toString()
         holder.view.findViewById<TextView>(R.id.student_name_exp).text =
-            experience_item[position].StudentName
-        holder.view.findViewById<TextView>(R.id.experience).text = experience_item[position].Exp
+            experience_item[position].studentName
+        holder.view.findViewById<TextView>(R.id.experience).text = experience_item[position].exp
     }
 }

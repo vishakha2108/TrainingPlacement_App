@@ -5,24 +5,28 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "company_details")
-data class CompanyDetails(
-    @PrimaryKey
-    val CompanyName: String,
-    @ColumnInfo(name = "min_cgpa")
-    val MinCgpa: Float = 0.0f,
-    @ColumnInfo(name = "max_backlog")
-    val MaxBacklogs: Int = 0,
-    @ColumnInfo(name = "stream")
-    val Stream: String = "Any",
-    @ColumnInfo(name = "jd")
-    val JD: String = "",
-    @ColumnInfo(name = "location")
-    val Location: String = "will be specified later",
-    @ColumnInfo(name = "stipend")
-    val Stipend: String = "will be specified later",
-    @ColumnInfo(name = "notes")
-    val Notes: String = ""
 
-)
+ class CompanyDetails (
+
+
+     val companyName: String,
+     val minCgpa: Float ,
+     val maxBacklogs: Int ,
+     val stream: String ,
+     val jD: String ,
+     val location: String ,
+     val stipend: String ,
+     val notes: String)
+ {
+
+
+
+         constructor() : this("hi", 0.0f, 0, "Any", "", "will be specified later", "will be specified later", "")
+         {
+
+         }
+
+
+
+ }
 

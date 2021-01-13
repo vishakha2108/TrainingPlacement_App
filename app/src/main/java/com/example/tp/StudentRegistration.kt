@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.navigation.findNavController
 import com.example.tp.BaseFragment
 import com.example.tp.R
-import database.AppDatabase
 import database.StudentDetails
 import kotlinx.coroutines.launch
 
@@ -29,7 +28,7 @@ class StudentRegistration : BaseFragment() {
             val cgpa = view.findViewById<EditText>(R.id.input_cgpa).text.toString().trim()
             val backlogs = view.findViewById<EditText>(R.id.input_backlogs).text.toString().trim()
             val stream = view.findViewById<EditText>(R.id.input_stream).text.toString().trim()
-
+            val password = view.findViewById<EditText>(R.id.input_password1).text.toString().trim()
             val phoneNo = view.findViewById<EditText>(R.id.input_contactno).text.toString().trim()
 
             //validation
@@ -40,17 +39,18 @@ class StudentRegistration : BaseFragment() {
                     cgpa.toFloat(),
                     backlogs.toInt(),
                     stream,
-                    phoneNo.toInt()
+                    phoneNo.toLong(),
+                    password
                 )
-                launch {
-                    context?.let()
-                    {
-                        AppDatabase(requireActivity()).getStudentDetailsDao().addStudentDetails(obj)
-                        Toast.makeText(it, "Insert Successful", Toast.LENGTH_SHORT).show()
-                        view.findNavController()
-                            .navigate(R.id.action_studentRegistration_to_studentDashboard)
-                    }
+
+                ref.child("Students").child(rollNo).setValue(obj).addOnCompleteListener()
+                {
+                    Toast.makeText(context, "Sign up Successful", Toast.LENGTH_SHORT).show()
                 }
+
+                view.findNavController().navigate(R.id.action_studentRegistration_to_studentDashboard)
+
+
             } else {
                 Toast.makeText(context, "Details missing", Toast.LENGTH_SHORT).show()
             }

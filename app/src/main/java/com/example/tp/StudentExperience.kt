@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.navigation.findNavController
-import database.AppDatabase
 import database.Experience
 import kotlinx.coroutines.launch
 
@@ -32,9 +31,10 @@ class StudentExperience : BaseFragment() {
 
             //validation
             if (cName != "" && exp != "" && sName != "" && rollNo != "") {
-                launch {
                     val obj: Experience = Experience(cName, rollNo.toInt(), sName, exp)
-                    AppDatabase(requireActivity()).getExperienceDao().addExperience(obj)
+
+                ref.child("Experiences").child(rollNo).setValue(obj).addOnCompleteListener()
+                {
                     Toast.makeText(context, "Experience added", Toast.LENGTH_SHORT).show()
                 }
             } else {
