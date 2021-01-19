@@ -88,6 +88,7 @@ class AdminAddCompany : BaseFragment() {
                 ref.child("Companies").child(companyName).setValue(obj).addOnCompleteListener()
                 {
                     Toast.makeText(context, "Insert Successful", Toast.LENGTH_SHORT).show()
+                    createNotificationChannel()
                     Notify()
                 }
             } else {
@@ -99,8 +100,7 @@ class AdminAddCompany : BaseFragment() {
         val cancelButton = view.findViewById<Button>(R.id.button_cancel_add)
         cancelButton.setOnClickListener {
             Toast.makeText(context, "Changes not saved", Toast.LENGTH_LONG).show()
-            createNotificationChannel()
-            Notify()
+
 
             //nav graph command
             view.findNavController().navigate(R.id.action_adminAddCompany_to_adminDashboard)

@@ -1,3 +1,4 @@
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +17,7 @@ class StudentRegistration : BaseFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        super.onCreateView(inflater, container, savedInstanceState)
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_student_registration, container, false)
 
@@ -46,9 +48,10 @@ class StudentRegistration : BaseFragment() {
                 ref.child("Students").child(rollNo).setValue(obj).addOnCompleteListener()
                 {
                     Toast.makeText(context, "Sign up Successful", Toast.LENGTH_SHORT).show()
+                    view.findNavController().navigate(R.id.action_studentRegistration_to_studentDashboard)
                 }
 
-                view.findNavController().navigate(R.id.action_studentRegistration_to_studentDashboard)
+
 
 
             } else {
