@@ -2,18 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/gradient"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_experience"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="16dp">
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="1dp">
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/translucent_white"
+            android:background="@color/white"
             android:padding="20dp">
 
             <TextView
@@ -21,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:fontFamily="@font/roboto"
+                android:fontFamily="@font/playfair_display"
                 android:text="@string/company_name"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -30,9 +34,10 @@
                 android:id="@+id/company_title_exp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/company_name_label_list_experiences"
                 android:layout_toEndOf="@id/company_name_label_list_experiences"
-                android:fontFamily="@font/roboto"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/playfair_display"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -42,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/company_name_label_list_experiences"
                 android:layout_marginBottom="8dp"
-                android:fontFamily="@font/roboto"
+                android:fontFamily="@font/playfair_display"
                 android:text="@string/roll_no"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -52,9 +57,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/company_title_exp"
-                android:layout_alignBottom="@id/roll_no_label_exp"
                 android:layout_toEndOf="@id/roll_no_label_exp"
-                android:fontFamily="@font/roboto"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/playfair_display"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -64,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/roll_no_label_exp"
                 android:layout_marginBottom="8dp"
-                android:fontFamily="@font/roboto"
+                android:fontFamily="@font/playfair_display"
                 android:text="@string/student_name"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -74,9 +80,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/roll_no"
-                android:layout_alignBottom="@id/student_name_label_list_experiences"
-                android:layout_toEndOf="@id/company_name_label_list_experiences"
-                android:fontFamily="@font/roboto"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@+id/student_name_label_list_experiences"
+                android:fontFamily="@font/playfair_display"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -86,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/student_name_label_list_experiences"
                 android:layout_marginBottom="8dp"
-                android:fontFamily="@font/roboto"
+                android:fontFamily="@font/playfair_display"
                 android:text="@string/experience"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -96,9 +103,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/student_name_exp"
-                android:layout_alignBottom="@id/experience_label_list_experiences"
                 android:layout_toEndOf="@id/experience_label_list_experiences"
-                android:fontFamily="@font/roboto"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/playfair_display"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
