@@ -35,7 +35,9 @@ class AdminViewStudentList : BaseFragment() {
                         val element = e.getValue(Experience::class.java)
                         listExperiences.add(element!!)
 
+
                     }
+                    ans.text = listExperiences.size.toString()
 
                 }
 
@@ -48,7 +50,7 @@ class AdminViewStudentList : BaseFragment() {
 
         })
 
-        ans.text = listExperiences.size.toString()
+
 
 
         //back button
