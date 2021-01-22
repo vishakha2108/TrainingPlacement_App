@@ -32,6 +32,14 @@ class AdminLogin : Fragment() {
                 Toast.makeText(context, "Invalid User Name", Toast.LENGTH_LONG).show()
             }
         }
+
+        //back button
+        val backButton = view.findViewById<Button>(R.id.button_back)
+        backButton.setOnClickListener {
+            //nav graph command
+            view.findNavController().navigate(R.id.action_adminLogin_to_onboarding)
+        }
+
         return view.rootView
     }
 }

@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/gradient"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
@@ -12,14 +11,13 @@
         android:layout_margin="16dp"
         app:cardCornerRadius="30dp"
         app:cardElevation="0dp"
-        app:cardMaxElevation="0dp"
         app:cardPreventCornerOverlap="false">
 
         <RelativeLayout
             android:id="@+id/container_company"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/white"
+            android:background="@color/translucent_white"
             android:padding="20dp">
 
             <TextView
@@ -30,19 +28,18 @@
                 android:fontFamily="@font/playfair_display"
                 android:text="@string/company_name"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/company_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:layout_marginBottom="8dp"
                 android:layout_marginStart="4dp"
+                android:layout_alignBaseline="@id/company_name_label_list_companies"
                 android:layout_toEndOf="@id/company_name_label_list_companies"
                 android:fontFamily="@font/playfair_display"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/min_cgpa_label_list_companies"
@@ -53,19 +50,19 @@
                 android:fontFamily="@font/playfair_display"
                 android:text="@string/min_cgpa"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/min_cgpa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/min_cgpa_label_list_companies"
                 android:layout_below="@id/company_title"
                 android:layout_toEndOf="@id/min_cgpa_label_list_companies"
-                android:layout_marginBottom="8dp"
                 android:layout_marginStart="4dp"
                 android:fontFamily="@font/playfair_display"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/max_backlog_label_list_companies"
@@ -76,7 +73,7 @@
                 android:fontFamily="@font/playfair_display"
                 android:text="@string/max_backlogs"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/max_backlog"
@@ -84,11 +81,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/min_cgpa"
                 android:layout_toEndOf="@id/max_backlog_label_list_companies"
-                android:layout_marginBottom="8dp"
+                android:layout_alignBaseline="@id/max_backlog_label_list_companies"
                 android:layout_marginStart="4dp"
                 android:fontFamily="@font/playfair_display"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/stream_label_list_companies"
@@ -99,7 +96,7 @@
                 android:fontFamily="@font/playfair_display"
                 android:text="@string/streams"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/stream"
@@ -107,11 +104,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/max_backlog"
                 android:layout_toEndOf="@id/stream_label_list_companies"
-                android:layout_marginBottom="8dp"
+                android:layout_alignBaseline="@id/stream_label_list_companies"
                 android:layout_marginStart="4dp"
                 android:fontFamily="@font/playfair_display"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/job_description_label_list_companies"
@@ -122,7 +119,7 @@
                 android:fontFamily="@font/playfair_display"
                 android:text="@string/job_description"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/job_description"
@@ -130,11 +127,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/stream"
                 android:layout_toEndOf="@id/job_description_label_list_companies"
-                android:layout_marginBottom="8dp"
+                android:layout_alignBaseline="@id/job_description_label_list_companies"
                 android:layout_marginStart="4dp"
                 android:fontFamily="@font/playfair_display"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/location_label_list_companies"
@@ -145,7 +142,7 @@
                 android:fontFamily="@font/playfair_display"
                 android:text="@string/location"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/location"
@@ -153,11 +150,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/job_description"
                 android:layout_toEndOf="@id/location_label_list_companies"
-                android:layout_marginBottom="8dp"
+                android:layout_alignBaseline="@id/location_label_list_companies"
                 android:layout_marginStart="4dp"
                 android:fontFamily="@font/playfair_display"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/stipend_label_list_companies"
@@ -168,7 +165,7 @@
                 android:fontFamily="@font/playfair_display"
                 android:text="@string/stipend"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/stipend"
@@ -176,11 +173,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/location"
                 android:layout_toEndOf="@id/stipend_label_list_companies"
-                android:layout_marginBottom="8dp"
+                android:layout_alignBaseline="@id/stipend_label_list_companies"
                 android:layout_marginStart="4dp"
                 android:fontFamily="@font/playfair_display"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
         </RelativeLayout>
 

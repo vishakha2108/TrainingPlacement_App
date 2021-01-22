@@ -13,7 +13,6 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import database.Experience
 import database.StudentDetails
 
 class StudentLogin : Fragment() {
@@ -27,8 +26,8 @@ class StudentLogin : Fragment() {
         logbutton.setOnClickListener {
             val username: EditText = view.findViewById(R.id.input_name)
             val password: EditText = view.findViewById(R.id.input_password)
-            var flag = 1;
-            val students = FirebaseDatabase.getInstance().getReference().child("Students")
+            var flag = 1
+            val students = FirebaseDatabase.getInstance().reference.child("Students")
             students.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(p0: DataSnapshot) {
                     if (p0.exists()) {
@@ -37,7 +36,7 @@ class StudentLogin : Fragment() {
                             println(e)
                             val element = e.getValue(StudentDetails::class.java)
                             if (username.text.toString().equals(element!!.fullName)) {
-                                if (password.text.toString().equals(element!!.password)) {
+                                if (password.text.toString().equals(element.password)) {
                                     Toast.makeText(context, "Login Successful", Toast.LENGTH_LONG)
                                         .show()
                                     view.findNavController()
@@ -68,6 +67,14 @@ class StudentLogin : Fragment() {
 
 
         }
+
+        //back button
+        val backButton = view.findViewById<Button>(R.id.button_back)
+        backButton.setOnClickListener {
+            //nav graph command
+            view.findNavController().navigate(R.id.action_studentLogin_to_onboarding)
+        }
+
         return view.rootView
     }
 }

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/gradient"
+
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
@@ -17,7 +17,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/white"
+            android:background="@color/translucent_white"
             android:padding="20dp">
 
             <TextView
@@ -28,18 +28,18 @@
                 android:fontFamily="@font/playfair_display"
                 android:text="@string/company_name"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/company_title_exp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/company_name_label_list_experiences"
-                android:layout_marginBottom="8dp"
                 android:layout_marginStart="4dp"
+                android:layout_alignBaseline="@id/company_name_label_list_experiences"
                 android:fontFamily="@font/playfair_display"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/roll_no_label_exp"
@@ -50,7 +50,7 @@
                 android:fontFamily="@font/playfair_display"
                 android:text="@string/roll_no"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/roll_no"
@@ -58,11 +58,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/company_title_exp"
                 android:layout_toEndOf="@id/roll_no_label_exp"
-                android:layout_marginBottom="8dp"
                 android:layout_marginStart="4dp"
+                android:layout_alignBaseline="@id/roll_no_label_exp"
                 android:fontFamily="@font/playfair_display"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/student_name_label_list_experiences"
@@ -73,19 +73,19 @@
                 android:fontFamily="@font/playfair_display"
                 android:text="@string/student_name"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/student_name_exp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/roll_no"
-                android:layout_marginBottom="8dp"
                 android:layout_marginStart="4dp"
+                android:layout_alignBaseline="@id/student_name_label_list_experiences"
                 android:layout_toEndOf="@+id/student_name_label_list_experiences"
                 android:fontFamily="@font/playfair_display"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/experience_label_list_experiences"
@@ -96,7 +96,7 @@
                 android:fontFamily="@font/playfair_display"
                 android:text="@string/experience"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/experience"
@@ -104,11 +104,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/student_name_exp"
                 android:layout_toEndOf="@id/experience_label_list_experiences"
-                android:layout_marginBottom="8dp"
                 android:layout_marginStart="4dp"
+                android:layout_alignBaseline="@id/experience_label_list_experiences"
                 android:fontFamily="@font/playfair_display"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
 
         </RelativeLayout>

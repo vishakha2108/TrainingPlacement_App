@@ -39,14 +39,38 @@
         app:srcCompat="@drawable/ic_header_base" />
 
     <ImageView
-        android:id="@+id/menu_icon"
+        android:id="@+id/back_arrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@id/header_base"
+        android:layout_marginStart="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/header_base"
-        app:srcCompat="@drawable/ic_menu" />
+        android:background="@drawable/ic_back_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/header_base" />
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="@id/back_arrow"
+        app:layout_constraintEnd_toEndOf="@id/back_arrow"
+        app:layout_constraintStart_toStartOf="@id/back_arrow"
+        app:layout_constraintTop_toTopOf="@id/back_arrow" />
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/playfair_display"
+        android:text="Welcome"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/header_base"
+        app:layout_constraintEnd_toEndOf="@id/header_base"
+        app:layout_constraintStart_toStartOf="@id/header_base"
+        app:layout_constraintTop_toTopOf="@id/header_base" />
+
 
     <EditText
         android:id="@+id/input_name"
@@ -89,18 +113,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_name" />
 
-    <TextView
-        android:id="@+id/welcome_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/playfair_display"
-        android:text="Welcome"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@id/header_base"
-        app:layout_constraintEnd_toEndOf="@id/header_base"
-        app:layout_constraintStart_toStartOf="@id/header_base"
-        app:layout_constraintTop_toTopOf="@id/header_base" />
 
     <Button
         android:id="@+id/button_enter"

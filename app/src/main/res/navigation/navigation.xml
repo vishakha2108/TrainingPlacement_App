@@ -28,6 +28,11 @@
             app:destination="@id/studentDashboard"
             app:popUpTo="@id/onboarding"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_studentLogin_to_onboarding"
+            app:destination="@id/onboarding"
+            app:popUpTo="@id/onboarding"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/adminLogin"
@@ -38,6 +43,11 @@
             app:destination="@id/adminDashboard"
             app:popUpTo="@id/onboarding"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_adminLogin_to_onboarding"
+            app:destination="@id/onboarding"
+            app:popUpTo="@id/onboarding"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/adminDashboard"
