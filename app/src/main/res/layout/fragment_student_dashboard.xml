@@ -23,7 +23,7 @@
         app:layout_constraintBottom_toBottomOf="@id/header_base"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/header_base"
-        app:srcCompat="@drawable/ic_logo_icon" />
+        app:srcCompat="@drawable/ic_college_half_logo_icon" />
 
     <TextView
         android:id="@+id/student_dashboard_text"

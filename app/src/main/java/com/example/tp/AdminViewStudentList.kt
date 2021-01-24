@@ -12,7 +12,6 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import database.Experience
-import kotlinx.coroutines.launch
 
 class AdminViewStudentList : BaseFragment() {
     override fun onCreateView(
@@ -21,8 +20,8 @@ class AdminViewStudentList : BaseFragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_admin_view_students, container, false)
-        val ans = view.findViewById<TextView>(R.id.students_placed_label)
-        val experiences = FirebaseDatabase.getInstance().getReference().child("Experiences")
+        val ans = view.findViewById<TextView>(R.id.no_students)
+        val experiences = FirebaseDatabase.getInstance().reference.child("Experiences")
         val listExperiences = ArrayList<Experience>()
         experiences.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
