@@ -64,6 +64,7 @@
         android:layout_height="wrap_content"
         android:text="Welcome"
         android:textColor="@color/white"
+        android:fontFamily="@font/playfair_display"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@id/header_base"
         app:layout_constraintEnd_toEndOf="@id/header_base"
